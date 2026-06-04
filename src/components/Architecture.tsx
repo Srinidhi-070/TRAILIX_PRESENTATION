@@ -52,6 +52,20 @@ export default function Architecture() {
     return <Cpu className="text-cyan-400" size={20} />;
   };
 
+  const sequenceSteps = [
+    { id: 1, actor: 'Trailix Client', action: 'Scan Environmental QR Code', target: 'Physical QR Anchor' },
+    { id: 2, actor: 'Physical QR Anchor', action: 'Decode JSON Payload (node_id, building, floor)', target: 'Trailix Client' },
+    { id: 3, actor: 'Trailix Client', action: 'Calibrate AR World Origin', target: 'Local Core' },
+    { id: 4, actor: 'Trailix Client', action: 'POST /api/navigate (Current Node, Target Node)', target: 'FastAPI Backend' },
+    { id: 5, actor: 'FastAPI Backend', action: 'Load Topographical Edges', target: 'JSON Graph Database' },
+    { id: 6, actor: 'JSON Graph Database', action: 'Return Graph Weights', target: 'FastAPI Backend' },
+    { id: 7, actor: 'FastAPI Backend', action: 'Execute Dijkstra Shortest-Path Algorithm', target: 'Local Core' },
+    { id: 8, actor: 'FastAPI Backend', action: 'Return 200 OK (Array[Vector3], Floor Transitions)', target: 'Trailix Client' },
+    { id: 9, actor: 'Trailix Client', action: 'Generate 3D Catmull-Rom Splines', target: 'Local Core' },
+    { id: 10, actor: 'Trailix Client', action: 'Instantiate Procedural Chevron Indicators', target: 'Local Core' },
+    { id: 11, actor: 'Trailix Client', action: 'Begin Visualizer Animation Flow', target: 'Local Core' }
+  ];
+
   const containerVariants = {
     hidden: { opacity: 0 },
     show: {
