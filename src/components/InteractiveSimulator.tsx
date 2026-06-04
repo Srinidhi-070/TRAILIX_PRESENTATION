@@ -304,7 +304,7 @@ export default function InteractiveSimulator() {
                 <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
                 <span className="text-xs font-display font-bold tracking-wider text-black dark:text-white">TRAILIX</span>
               </div>
-              <div className="text-[9px] font-mono bg-cyan-950 text-cyan-400 px-1.5 py-0.5 rounded border border-cyan-800/30">
+              <div className="text-[9px] font-mono bg-cyan-50 dark:bg-cyan-950 text-cyan-400 px-1.5 py-0.5 rounded border border-cyan-800/30">
                 {currentStep === 'scan' ? 'LOCALIZING' : currentStep === 'search' ? 'SEARCH' : currentStep === 'pathfinding' ? 'A* CORE' : 'AR LIVE'}
               </div>
             </div>
@@ -391,7 +391,7 @@ export default function InteractiveSimulator() {
                     className="absolute inset-0 flex flex-col p-3"
                   >
                     {/* Active Localized Anchor Info */}
-                    <div className="p-2.5 rounded-xl bg-cyan-950/40 border border-cyan-500/20 mb-3 flex items-center justify-between">
+                    <div className="p-2.5 rounded-xl bg-cyan-50 dark:bg-cyan-950/40 border border-cyan-500/20 mb-3 flex items-center justify-between">
                       <div className="flex items-center gap-1.5 overflow-hidden">
                         <MapPin size={12} className="text-cyan-400 flex-shrink-0" />
                         <div className="text-left overflow-hidden">
@@ -449,7 +449,7 @@ export default function InteractiveSimulator() {
                             <div className="text-[10px] font-medium text-slate-800 dark:text-slate-200">{loc.name}</div>
                             <div className="text-[8px] text-slate-500 mt-0.5">{loc.block} • Floor {loc.floor}</div>
                           </div>
-                          <span className="text-[8px] font-mono text-cyan-400 bg-cyan-950/50 border border-cyan-900/30 px-1 py-0.5 rounded">
+                          <span className="text-[8px] font-mono text-cyan-400 bg-cyan-50 dark:bg-cyan-950/50 border border-cyan-900/30 px-1 py-0.5 rounded">
                             {loc.type}
                           </span>
                         </div>
@@ -523,7 +523,7 @@ export default function InteractiveSimulator() {
                         <div className="absolute top-2 left-2 text-[7px] font-mono bg-white dark:bg-slate-900/90 text-slate-600 dark:text-slate-400 py-0.5 px-1 rounded border border-slate-200 dark:border-white/5">
                           Start: MSRIT Gate [G]
                         </div>
-                        <div className="absolute bottom-2 right-2 text-[7px] font-mono bg-cyan-950/90 text-cyan-400 py-0.5 px-1 rounded border border-cyan-900/40">
+                        <div className="absolute bottom-2 right-2 text-[7px] font-mono bg-cyan-50 dark:bg-cyan-950/90 text-cyan-400 py-0.5 px-1 rounded border border-cyan-900/40">
                           Target: F2 Sem Hall
                         </div>
                       </div>
@@ -665,7 +665,7 @@ export default function InteractiveSimulator() {
                           </motion.div>
                         )}
 
-                        <div className="text-[7px] font-mono text-slate-500 bg-black/40 px-1 py-0.5 rounded backdrop-blur-2xs mt-2">
+                        <div className="text-[7px] font-mono text-slate-500 bg-black/5 dark:bg-black/40 px-1 py-0.5 rounded backdrop-blur-2xs mt-2">
                           Unity Core Anchored • Pose Validated
                         </div>
                       </div>

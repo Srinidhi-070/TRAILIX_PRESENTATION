@@ -107,7 +107,7 @@ export default function TeamSection() {
             
             {/* Advisor Vector Emblem */}
             <div className="w-24 h-24 rounded-full bg-slate-50 dark:bg-slate-950 border-2 border-dashed border-cyan-400/40 flex items-center justify-center relative flex-shrink-0">
-              <div className="w-18 h-18 rounded-full bg-cyan-950/40 border border-slate-200 dark:border-white/5 flex items-center justify-center">
+              <div className="w-18 h-18 rounded-full bg-cyan-50 dark:bg-cyan-950/40 border border-slate-200 dark:border-white/5 flex items-center justify-center">
                 <GraduationCap className="text-cyan-400" size={32} />
               </div>
             </div>
@@ -227,7 +227,7 @@ export default function TeamSection() {
                   {/* Ownership header */}
                   <div className="flex justify-between items-center border-b border-slate-200 dark:border-white/5 pb-4">
                     <div className="flex items-center gap-2">
-                      <div className="p-1 rounded bg-cyan-950 text-cyan-400 border border-cyan-850">
+                      <div className="p-1 rounded bg-cyan-50 dark:bg-cyan-950 text-cyan-400 border border-cyan-850">
                         <Code2 size={14} />
                       </div>
                       <span className="text-xs font-mono font-medium text-cyan-400 uppercase tracking-widest leading-none">

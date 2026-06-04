@@ -49,7 +49,7 @@ export default function ProblemStatement() {
             <div className="space-y-4 font-sans text-sm text-slate-600 dark:text-slate-400">
               {PROBLEM_STATEMENT.challenges.map((challenge, idx) => (
                 <div key={challenge.id} className="flex gap-3">
-                  <div className="w-5 h-5 rounded-full bg-rose-950/40 text-rose-400 flex items-center justify-center font-bold text-[10px] border border-rose-900/30 flex-shrink-0 mt-0.5 font-mono">
+                  <div className="w-5 h-5 rounded-full bg-rose-50 dark:bg-rose-950/40 text-rose-400 flex items-center justify-center font-bold text-[10px] border border-rose-900/30 flex-shrink-0 mt-0.5 font-mono">
                     {idx + 1}
                   </div>
                   <div>
@@ -64,7 +64,7 @@ export default function ProblemStatement() {
           {/* Interactive Failure block illustration diagram */}
           <div className="lg:col-span-6">
             <div className="p-6 rounded-3xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-white/5 relative overflow-hidden backdrop-blur-md">
-              <div className="absolute top-2 right-2 text-[9px] font-mono text-rose-500 bg-rose-950/40 px-2 py-0.5 rounded border border-rose-900/20">
+              <div className="absolute top-2 right-2 text-[9px] font-mono text-rose-500 bg-rose-50 dark:bg-rose-950/40 px-2 py-0.5 rounded border border-rose-900/20">
                 LINE-OF-SIGHT BLOCKED
               </div>
               

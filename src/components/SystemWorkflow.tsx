@@ -82,7 +82,7 @@ export default function SystemWorkflow() {
                             isActive 
                               ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30' 
                               : isPassed 
-                                ? 'bg-emerald-950/40 text-emerald-400 border border-emerald-900/20' 
+                                ? 'bg-emerald-50 dark:bg-emerald-950/40 text-emerald-400 border border-emerald-900/20' 
                                 : 'bg-slate-50 dark:bg-slate-950 text-slate-500 border border-slate-200 dark:border-white/5'
                           }`}>
                             {getIcon(step.icon)}
@@ -151,7 +151,7 @@ export default function SystemWorkflow() {
 
                 <div className="space-y-6 text-left">
                   <div className="flex justify-between items-center border-b border-slate-200 dark:border-white/5 pb-4">
-                    <span className="text-[10px] font-mono font-medium text-cyan-400 bg-cyan-950/80 px-2.5 py-1 rounded-full border border-cyan-805/40 uppercase tracking-widest leading-none">
+                    <span className="text-[10px] font-mono font-medium text-cyan-400 bg-cyan-50 dark:bg-cyan-950/80 px-2.5 py-1 rounded-full border border-cyan-805/40 uppercase tracking-widest leading-none">
                       Active Subprocesses
                     </span>
                     <span className="text-xs font-mono text-slate-500">Step {activeStep + 1} / 7</span>

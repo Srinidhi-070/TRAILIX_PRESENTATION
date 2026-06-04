@@ -110,7 +110,7 @@ export default function Architecture() {
         <div className="hidden lg:block relative w-full h-[650px] md:h-[800px] bg-white dark:bg-slate-900/60 rounded-3xl border border-slate-300 dark:border-white/10 backdrop-blur-md shadow-2xl mb-16 overflow-hidden">
           
           {/* Conceptual Boundaries (Unity AR & FastAPI) */}
-          <div className="absolute top-[22%] left-[5%] right-[5%] h-[20%] border-2 border-dashed border-cyan-500/30 rounded-xl bg-cyan-950/10 pointer-events-none">
+          <div className="absolute top-[22%] left-[5%] right-[5%] h-[20%] border-2 border-dashed border-cyan-500/30 rounded-xl bg-cyan-50 dark:bg-cyan-950/10 pointer-events-none">
              <span className="absolute -top-3 left-6 bg-white dark:bg-slate-900 px-2 text-[10px] font-mono text-cyan-500">Unity AR (Client)</span>
           </div>
           <div className="absolute top-[52%] left-[35%] right-[35%] h-[32%] border-2 border-dashed border-purple-500/30 rounded-xl bg-purple-950/10 pointer-events-none">
@@ -189,8 +189,8 @@ export default function Architecture() {
                   `}
                 >
                   <div className={`w-8 h-8 rounded-lg mb-1.5 flex items-center justify-center border shadow-inner transition-colors duration-300
-                    ${isSelected ? 'bg-emerald-950/50 border-emerald-500/50' : 
-                      isHovered ? 'bg-cyan-950/50 border-cyan-500/50' : 
+                    ${isSelected ? 'bg-emerald-50 dark:bg-emerald-950/50 border-emerald-500/50' : 
+                      isHovered ? 'bg-cyan-50 dark:bg-cyan-950/50 border-cyan-500/50' : 
                       'bg-slate-50 dark:bg-slate-950 border-slate-300 dark:border-white/10'}
                   `}>
                     {getIconForType(node.type)}
@@ -210,7 +210,7 @@ export default function Architecture() {
               animate={{ opacity: 1, y: 0 }}
               className="absolute bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-md bg-white dark:bg-slate-900/95 border border-emerald-500/50 rounded-2xl p-5 shadow-[0_0_50px_rgba(16,185,129,0.2)] backdrop-blur-xl z-50 flex items-start gap-4"
             >
-              <div className="w-12 h-12 shrink-0 rounded-xl bg-emerald-950 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+              <div className="w-12 h-12 shrink-0 rounded-xl bg-emerald-50 dark:bg-emerald-950 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
                 {getIconForType(nodes[selectedNode].type)}
               </div>
               <div>
@@ -307,7 +307,7 @@ export default function Architecture() {
                     <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 -translate-x-full group-hover:translate-x-full transition-all duration-1000 ease-in-out pointer-events-none"></div>
 
                     <div className="flex items-center gap-4 relative z-10">
-                      <div className="text-[11px] font-mono font-bold text-cyan-400 bg-cyan-950/70 px-2.5 py-1.5 rounded border border-cyan-900 w-9 flex justify-center shrink-0 group-hover:bg-cyan-500 group-hover:text-black dark:text-white transition-colors">
+                      <div className="text-[11px] font-mono font-bold text-cyan-400 bg-cyan-50 dark:bg-cyan-950/70 px-2.5 py-1.5 rounded border border-cyan-900 w-9 flex justify-center shrink-0 group-hover:bg-cyan-500 group-hover:text-black dark:text-white transition-colors">
                         {step.id}
                       </div>
                       <div>

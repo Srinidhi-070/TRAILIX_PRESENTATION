@@ -339,7 +339,7 @@ export default function Hero() {
                   <div className="my-auto relative flex flex-col items-center justify-center space-y-4">
                     <div className="relative w-28 h-28 rounded-full border border-dashed border-cyan-500/15 flex items-center justify-center">
                       <div className="absolute inset-4 rounded-full border border-double border-blue-500/20 flex items-center justify-center">
-                        <div className="w-16 h-16 rounded-full bg-cyan-950/20 border border-cyan-400/30 flex items-center justify-center relative animate-pulse">
+                        <div className="w-16 h-16 rounded-full bg-cyan-50 dark:bg-cyan-950/20 border border-cyan-400/30 flex items-center justify-center relative animate-pulse">
                           <Navigation size={22} className="text-cyan-400 animate-bounce" />
                         </div>
                       </div>
@@ -368,7 +368,7 @@ export default function Hero() {
                     
                     <button 
                       onClick={() => fileInputRef.current?.click()}
-                      className="w-full py-1.5 bg-cyan-950/40 hover:bg-cyan-900/40 border border-cyan-500/20 rounded-lg text-[9px] font-mono text-cyan-400 font-bold tracking-wider uppercase transition text-center cursor-pointer"
+                      className="w-full py-1.5 bg-cyan-50 dark:bg-cyan-950/40 hover:bg-cyan-900/40 border border-cyan-500/20 rounded-lg text-[9px] font-mono text-cyan-400 font-bold tracking-wider uppercase transition text-center cursor-pointer"
                     >
                       Click to Select MP4
                     </button>

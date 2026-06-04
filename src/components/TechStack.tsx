@@ -98,8 +98,8 @@ export default function TechStack() {
                 <span className="text-slate-500 uppercase tracking-wider">Module tier</span>
                 <span className={`px-1.5 py-0.5 rounded-full border text-[8px] uppercase tracking-widest font-bold ${
                   tech.category === 'frontend' ? 'bg-pink-950/30 text-pink-400 border-pink-900/20' : 
-                  tech.category === 'backend' ? 'bg-indigo-950/30 text-indigo-400 border-indigo-900/20' : 
-                  'bg-amber-950/30 text-amber-400 border-amber-900/20'
+                  tech.category === 'backend' ? 'bg-indigo-50 dark:bg-indigo-950/30 text-indigo-400 border-indigo-900/20' : 
+                  'bg-amber-50 dark:bg-amber-950/30 text-amber-400 border-amber-900/20'
                 }`}>
                   {tech.category}
                 </span>

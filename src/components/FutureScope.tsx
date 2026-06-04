@@ -84,20 +84,20 @@ export default function FutureScope() {
             </div>
 
             <div className="md:col-span-4 grid grid-cols-2 gap-3">
-              <div className="p-3 rounded-xl bg-black/40 border border-slate-200 dark:border-white/5 text-center flex flex-col justify-center items-center">
-                <HeartPulse size={16} className="text-cyan-400 mb-1" />
+              <div className="p-3 rounded-xl bg-slate-50 dark:bg-black/40 border border-slate-200 dark:border-white/5 text-center flex flex-col justify-center items-center shadow-sm dark:shadow-none">
+                <HeartPulse size={16} className="text-cyan-600 dark:text-cyan-400 mb-1" />
                 <span className="text-[9px] font-mono text-slate-700 dark:text-slate-300">Hospitals</span>
               </div>
-              <div className="p-3 rounded-xl bg-black/40 border border-slate-200 dark:border-white/5 text-center flex flex-col justify-center items-center">
-                <SpaceShipPlaceholder size={16} className="text-purple-400 mb-1" />
+              <div className="p-3 rounded-xl bg-slate-50 dark:bg-black/40 border border-slate-200 dark:border-white/5 text-center flex flex-col justify-center items-center shadow-sm dark:shadow-none">
+                <SpaceShipPlaceholder size={16} className="text-purple-600 dark:text-purple-400 mb-1" />
                 <span className="text-[9px] font-mono text-slate-700 dark:text-slate-300">Airports</span>
               </div>
-              <div className="p-3 rounded-xl bg-black/40 border border-slate-200 dark:border-white/5 text-center flex flex-col justify-center items-center">
-                <ShoppingBag size={16} className="text-emerald-400 mb-1" />
+              <div className="p-3 rounded-xl bg-slate-50 dark:bg-black/40 border border-slate-200 dark:border-white/5 text-center flex flex-col justify-center items-center shadow-sm dark:shadow-none">
+                <ShoppingBag size={16} className="text-emerald-600 dark:text-emerald-400 mb-1" />
                 <span className="text-[9px] font-mono text-slate-700 dark:text-slate-300">Malls</span>
               </div>
-              <div className="p-3 rounded-xl bg-black/40 border border-slate-200 dark:border-white/5 text-center flex flex-col justify-center items-center">
-                <Landmark size={16} className="text-indigo-400 mb-1" />
+              <div className="p-3 rounded-xl bg-slate-50 dark:bg-black/40 border border-slate-200 dark:border-white/5 text-center flex flex-col justify-center items-center shadow-sm dark:shadow-none">
+                <Landmark size={16} className="text-indigo-600 dark:text-indigo-400 mb-1" />
                 <span className="text-[9px] font-mono text-slate-700 dark:text-slate-300">Museums</span>
               </div>
             </div>

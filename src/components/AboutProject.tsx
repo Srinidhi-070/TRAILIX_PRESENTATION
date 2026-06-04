@@ -29,19 +29,19 @@ export default function AboutProject() {
             </div>
           </div>
           
-          {/* Right Visual Highlight Block */}
+            {/* Right Visual Highlight Block */}
           <div className="lg:col-span-6 relative">
-            <div className="p-8 rounded-3xl bg-gradient-to-br from-blue-950/30 to-slate-900/30 border border-slate-300 dark:border-white/10 relative overflow-hidden backdrop-blur-md">
-              <div className="absolute -right-16 -top-16 w-48 h-48 bg-cyan-400/15 rounded-full blur-3xl pointer-events-none"></div>
+            <div className="p-8 rounded-3xl bg-slate-50 dark:bg-gradient-to-br dark:from-blue-950/30 dark:to-slate-900/30 border border-slate-300 dark:border-white/10 relative overflow-hidden backdrop-blur-md">
+              <div className="absolute -right-16 -top-16 w-48 h-48 bg-cyan-500/10 dark:bg-cyan-400/15 rounded-full blur-3xl pointer-events-none"></div>
               
               <h3 className="text-xl font-bold text-black dark:text-white mb-6 text-left flex items-center gap-2">
-                <Target size={20} className="text-cyan-400" />
+                <Target size={20} className="text-cyan-600 dark:text-cyan-400" />
                 Immersion & Direction Specs
               </h3>
               
               <div className="space-y-4">
-                <div className="p-4 rounded-2xl bg-black/40 border border-slate-200 dark:border-white/5 flex gap-4 text-left">
-                  <div className="p-2.5 h-10 w-10 text-cyan-400 bg-cyan-900/30 rounded-lg flex items-center justify-center">
+                <div className="p-4 rounded-2xl bg-white dark:bg-black/40 border border-slate-200 dark:border-white/5 flex gap-4 text-left shadow-sm dark:shadow-none">
+                  <div className="p-2.5 h-10 w-10 text-cyan-600 dark:text-cyan-400 bg-cyan-50 dark:bg-cyan-900/30 rounded-lg flex items-center justify-center">
                     <Compass size={20} />
                   </div>
                   <div>
@@ -50,8 +50,8 @@ export default function AboutProject() {
                   </div>
                 </div>
                 
-                <div className="p-4 rounded-2xl bg-black/40 border border-slate-200 dark:border-white/5 flex gap-4 text-left">
-                  <div className="p-2.5 h-10 w-10 text-blue-400 bg-blue-900/30 rounded-lg flex items-center justify-center">
+                <div className="p-4 rounded-2xl bg-white dark:bg-black/40 border border-slate-200 dark:border-white/5 flex gap-4 text-left shadow-sm dark:shadow-none">
+                  <div className="p-2.5 h-10 w-10 text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 rounded-lg flex items-center justify-center">
                     <BookOpen size={20} />
                   </div>
                   <div>

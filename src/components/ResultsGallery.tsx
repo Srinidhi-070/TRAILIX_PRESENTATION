@@ -103,7 +103,7 @@ export default function ResultsGallery() {
                 {renderScreenMockup(activeScreen.id, true)}
                 
                 {/* Floating absolute Hover indicator */}
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-xl">
+                <div className="absolute inset-0 bg-black/5 dark:bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-xl">
                   <div className="px-3 py-1.5 bg-white dark:bg-slate-900/90 border border-slate-300 dark:border-slate-800 rounded-lg text-xs text-black dark:text-white font-mono flex items-center gap-1.5">
                     <Maximize2 size={12} className="text-cyan-400" />
                     Inspect Module Architecture
@@ -147,7 +147,7 @@ export default function ResultsGallery() {
           {/* Right slides explanations columns (col-span-5) */}
           <div className="lg:col-span-5 text-left space-y-6">
             
-            <div className="inline-flex items-center gap-1.5 font-mono text-[10px] text-cyan-400 bg-cyan-950/40 px-2.5 py-1 rounded-full border border-cyan-900/30">
+            <div className="inline-flex items-center gap-1.5 font-mono text-[10px] text-cyan-400 bg-cyan-50 dark:bg-cyan-950/40 px-2.5 py-1 rounded-full border border-cyan-900/30">
               {getScreenIcon(activeScreen.id)}
               {activeScreen.tag}
             </div>
