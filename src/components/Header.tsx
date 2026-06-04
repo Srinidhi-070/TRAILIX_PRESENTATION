@@ -62,7 +62,7 @@ export default function Header() {
             MSRIT DEPT OF AI & DS
           </div>
           <a
-            href="#demo"
+            href="#overview"
             className="px-5 py-2 bg-white text-black rounded-full font-bold hover:bg-slate-200 transition-colors inline-flex items-center gap-1.5 shadow-md text-xs font-sans"
           >
             <Smartphone size={13} />
