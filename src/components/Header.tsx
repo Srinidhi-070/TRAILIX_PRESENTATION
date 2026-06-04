@@ -33,37 +33,8 @@ export default function Header() {
         
         {/* LOGO */}
         <a href="#" className="flex items-center gap-3 group">
-          <div className="relative w-10 h-10 rounded-lg overflow-hidden bg-gradient-to-tr from-blue-600 to-cyan-400 flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:scale-105 transition duration-300">
-            {/* Inline SVG representing the Hexagon arrow layout */}
-            <svg viewBox="0 0 100 100" className="w-6 h-6">
-              <defs>
-                <linearGradient id="logo-grad" x1="0%" y1="100%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#2563eb" />
-                  <stop offset="100%" stopColor="#06b6d4" />
-                </linearGradient>
-              </defs>
-              {/* Outer hexagonal contour layout */}
-              <polygon 
-                points="50,12 85,32 85,72 50,92 15,72 15,32" 
-                fill="none" 
-                stroke="url(#logo-grad)" 
-                strokeWidth="7" 
-                strokeLinejoin="round"
-              />
-              {/* Dynamic pathway winding through */}
-              <path 
-                d="M 30,68 C 30,55 45,55 45,45 C 45,35 60,35 60,25" 
-                fill="none" 
-                stroke="url(#logo-grad)" 
-                strokeWidth="7" 
-                strokeLinecap="round" 
-              />
-              {/* Arrow pointer head */}
-              <polygon 
-                points="60,20 66,28 54,28" 
-                fill="url(#logo-grad)" 
-              />
-            </svg>
+          <div className="relative w-10 h-10 rounded-xl overflow-hidden bg-white flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:scale-105 transition duration-300">
+            <img src="/logo.png" alt="Trailix Logo" className="w-full h-full object-cover p-1" />
             <div className="absolute inset-0 bg-cyan-400/5 opacity-0 group-hover:opacity-100 transition duration-300"></div>
           </div>
           <div className="flex flex-col text-left">
