@@ -106,8 +106,8 @@ export default function Architecture() {
           </p>
         </motion.div>
 
-        {/* Interactive Node Graph Map */}
-        <div className="relative w-full h-[650px] md:h-[800px] bg-slate-900/60 rounded-3xl border border-white/10 backdrop-blur-md shadow-2xl mb-16 overflow-hidden">
+        {/* Interactive Node Graph Map (Hidden on mobile, uses fallback flex layout) */}
+        <div className="hidden lg:block relative w-full h-[650px] md:h-[800px] bg-slate-900/60 rounded-3xl border border-white/10 backdrop-blur-md shadow-2xl mb-16 overflow-hidden">
           
           {/* Conceptual Boundaries (Unity AR & FastAPI) */}
           <div className="absolute top-[22%] left-[5%] right-[5%] h-[20%] border-2 border-dashed border-cyan-500/30 rounded-xl bg-cyan-950/10 pointer-events-none">
@@ -181,21 +181,21 @@ export default function Architecture() {
                   onMouseLeave={() => setHoveredNode(null)}
                   onClick={() => setSelectedNode(isSelected ? null : idx)}
                   style={{ left: `${node.x}%`, top: `${node.y}%` }}
-                  className={`absolute -translate-x-1/2 -translate-y-1/2 w-32 md:w-40 p-3 rounded-xl bg-slate-900 border transition-all duration-300 cursor-pointer flex flex-col items-center text-center shadow-xl
+                  className={`absolute -translate-x-1/2 -translate-y-1/2 w-28 lg:w-32 p-2 rounded-xl bg-slate-900 border transition-all duration-300 cursor-pointer flex flex-col items-center text-center shadow-xl
                     ${isSelected ? 'border-emerald-400 scale-110 z-40 shadow-[0_0_40px_rgba(16,185,129,0.3)] bg-slate-800' : 
                       isHovered ? 'border-cyan-400 scale-105 z-30 shadow-[0_0_30px_rgba(6,182,212,0.3)] bg-slate-800' : 
                       'border-white/10 hover:border-cyan-500/30 z-10'}
                     ${isFaded ? 'opacity-40 blur-[1px]' : 'opacity-100'}
                   `}
                 >
-                  <div className={`w-10 h-10 rounded-lg mb-2 flex items-center justify-center border shadow-inner transition-colors duration-300
+                  <div className={`w-8 h-8 rounded-lg mb-1.5 flex items-center justify-center border shadow-inner transition-colors duration-300
                     ${isSelected ? 'bg-emerald-950/50 border-emerald-500/50' : 
                       isHovered ? 'bg-cyan-950/50 border-cyan-500/50' : 
                       'bg-slate-950 border-white/10'}
                   `}>
                     {getIconForType(node.type)}
                   </div>
-                  <h4 className={`text-xs md:text-sm font-bold leading-tight ${isSelected ? 'text-emerald-400' : 'text-slate-100'}`}>
+                  <h4 className={`text-[11px] lg:text-xs font-bold leading-tight ${isSelected ? 'text-emerald-400' : 'text-slate-100'}`}>
                     {node.label}
                   </h4>
                 </motion.div>
