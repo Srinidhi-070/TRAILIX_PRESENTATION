@@ -254,7 +254,7 @@ export default function Hero() {
                     playsInline
                     autoPlay
                     loop
-                    className="w-full h-full object-cover rounded-[36px]"
+                    className="w-full h-full object-contain rounded-[36px] bg-black"
                   />
                   
                   {/* Subtle video status tag */}
