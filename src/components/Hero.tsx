@@ -43,16 +43,29 @@ export default function Hero() {
       setIsPlaying(true);
     };
 
+    const handleCanPlay = () => {
+      if (isPlaying) {
+        video.play().catch(e => console.error("Video play failed", e));
+      }
+    };
+
     video.addEventListener('timeupdate', handleTimeUpdate);
     video.addEventListener('durationchange', handleDurationChange);
     video.addEventListener('ended', handleEnded);
+    video.addEventListener('canplay', handleCanPlay);
+
+    // If it's already able to play, start it
+    if (video.readyState >= 3 && isPlaying) {
+      video.play().catch(e => console.error(e));
+    }
 
     return () => {
       video.removeEventListener('timeupdate', handleTimeUpdate);
       video.removeEventListener('durationchange', handleDurationChange);
       video.removeEventListener('ended', handleEnded);
+      video.removeEventListener('canplay', handleCanPlay);
     };
-  }, [videoSrc, currentDemoIdx]);
+  }, [videoSrc, currentDemoIdx, isPlaying]);
 
   const loadVideoFile = (file: File) => {
     if (file.type.startsWith('video/')) {
@@ -256,7 +269,6 @@ export default function Hero() {
                     poster="/demo/demo1.jpg"
                     muted={isMuted}
                     playsInline
-                    autoPlay
                     className="w-full h-full object-contain rounded-[36px] bg-black"
                   />
                   
