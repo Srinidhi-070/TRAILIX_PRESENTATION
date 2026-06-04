@@ -30,30 +30,36 @@ export default function ResultsGallery() {
   };
 
   const renderScreenMockup = (id: string, isLarge = false) => {
-    // If the screen is AR navigation, use the actual provided image
-    if (id === 'ar_navigation' || id === 'main_screen') {
-      return (
-        <div className={`relative w-full ${isLarge ? 'h-[360px]' : 'h-[250px]'} rounded-xl bg-slate-950 border border-white/5 overflow-hidden flex flex-col justify-center items-center`}>
-           <img 
-             src="/demo/ar_mapping_demo.png" 
-             alt="AR Mapping Demo" 
-             className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-           />
-        </div>
-      );
+    // Map each screen to the provided demo images
+    let imageSrc = '';
+    
+    switch(id) {
+      case 'main_screen':
+        imageSrc = '/demo/demo1.jpg';
+        break;
+      case 'qr_scanner':
+        imageSrc = '/demo/demo2.jpg';
+        break;
+      case 'destination_search':
+        imageSrc = '/demo/demo3.jpg';
+        break;
+      case 'ar_navigation':
+        imageSrc = '/demo/ar_mapping_demo.png';
+        break;
+      case 'ai_assistant':
+        imageSrc = '/demo/demo4.jpg';
+        break;
+      default:
+        imageSrc = '/demo/ar_mapping_demo.png';
     }
 
-    // For other screens, display a coming soon or stylized placeholder
     return (
-      <div className={`relative w-full ${isLarge ? 'h-[360px]' : 'h-[250px]'} rounded-xl bg-slate-950 border border-white/5 overflow-hidden flex flex-col justify-center items-center bg-dots`}>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-950/80"></div>
-        <div className="text-center z-10 p-4">
-          <div className="w-12 h-12 rounded-full bg-slate-900/80 border border-white/10 flex items-center justify-center mx-auto mb-3 text-cyan-400">
-             {getScreenIcon(id)}
-          </div>
-          <div className="text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-1">MODULE ONLINE</div>
-          <div className="text-sm font-bold text-slate-300">System Telemetry Connected</div>
-        </div>
+      <div className={`relative w-full ${isLarge ? 'h-[360px]' : 'h-[250px]'} rounded-xl bg-slate-950 border border-white/5 overflow-hidden flex flex-col justify-center items-center`}>
+         <img 
+           src={imageSrc} 
+           alt={`${id} Demo`} 
+           className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+         />
       </div>
     );
   };
