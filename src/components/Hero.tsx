@@ -253,6 +253,7 @@ export default function Hero() {
                   <video
                     ref={videoRef}
                     src={videoSrc}
+                    poster="/demo/demo1.jpg"
                     muted={isMuted}
                     playsInline
                     autoPlay
