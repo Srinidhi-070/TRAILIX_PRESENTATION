@@ -5,9 +5,16 @@ import {
 } from 'lucide-react';
 
 export default function Hero() {
-  const [videoSrc, setVideoSrc] = useState<string | null>(null);
+  const demos = [
+    '/demo/demo_vid_1.mp4',
+    '/demo/demo_vid_2.mp4',
+    '/demo/demo_vid_3.mp4',
+    '/demo/demo_vid_4.mp4'
+  ];
+  const [currentDemoIdx, setCurrentDemoIdx] = useState(0);
+  const [videoSrc, setVideoSrc] = useState<string | null>(demos[0]);
   const [videoFile, setVideoFile] = useState<File | null>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -107,9 +114,17 @@ export default function Hero() {
     setCurrentTime(seekTime);
   };
 
+  const nextVideo = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    const nextIdx = (currentDemoIdx + 1) % demos.length;
+    setCurrentDemoIdx(nextIdx);
+    setVideoSrc(demos[nextIdx]);
+    setIsPlaying(true);
+  };
+
   const clearVideo = (e: React.MouseEvent) => {
     e.stopPropagation();
-    if (videoSrc) {
+    if (videoSrc && videoSrc.startsWith('blob:')) {
       URL.revokeObjectURL(videoSrc);
     }
     setVideoSrc(null);
@@ -282,11 +297,11 @@ export default function Hero() {
                         </button>
                         
                         <button 
-                          onClick={clearVideo}
-                          className="p-1 text-rose-450 hover:text-rose-400 transition cursor-pointer"
-                          title="Remove video"
+                          onClick={nextVideo}
+                          className="p-1 text-cyan-400 hover:text-cyan-300 transition cursor-pointer"
+                          title="Next Demo Video"
                         >
-                          <X size={13} />
+                          <ArrowRight size={13} />
                         </button>
                       </div>
                     </div>

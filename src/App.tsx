@@ -16,7 +16,6 @@ import TechStack from './components/TechStack';
 import Architecture from './components/Architecture';
 import PerformanceMetrics from './components/PerformanceMetrics';
 import ResultsGallery from './components/ResultsGallery';
-import RealWorldDemo from './components/RealWorldDemo';
 import TeamSection from './components/TeamSection';
 import FutureScope from './components/FutureScope';
 import Footer from './components/Footer';
@@ -101,9 +100,6 @@ export default function App() {
 
         {/* RESULTS SCREEN GALLERY */}
         <ResultsGallery />
-
-        {/* REAL-WORLD DEMO SECTION */}
-        <RealWorldDemo />
 
         {/* ACADEMIC RESEARCH TEAM & GUIDANCE */}
         <TeamSection />
