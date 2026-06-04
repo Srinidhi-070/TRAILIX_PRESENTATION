@@ -83,13 +83,13 @@
 
 html {
   scroll-behavior: smooth;
-  height: 100%;
   scroll-snap-type: y mandatory;
 }
 
 body {
   background-color: #020617;
   color: #f8fafc;
+  overflow-x: hidden;
 }
 
 section, footer {

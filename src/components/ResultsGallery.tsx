@@ -29,108 +29,30 @@ export default function ResultsGallery() {
     }
   };
 
-  // Inline SVG visual screenshot generation based on screen type to look incredibly futuristic
   const renderScreenMockup = (id: string, isLarge = false) => {
-    const isMain = id === 'main_screen';
-    const isScan = id === 'qr_scanner';
-    const isSearch = id === 'destination_search';
-    const isAr = id === 'ar_navigation';
-    const isAi = id === 'ai_assistant';
-
-    return (
-      <div className={`relative w-full ${isLarge ? 'h-[360px]' : 'h-[250px]'} rounded-xl bg-slate-950 border border-white/5 overflow-hidden flex flex-col justify-between p-4 bg-dots`}>
-        {/* Screen Header inside wireframe */}
-        <div className="flex justify-between items-center text-[8px] font-mono text-slate-500 mb-2">
-          <span>TRAILIX HUD SYSTEM</span>
-          <span>FL-02_SECTOR-B</span>
+    // If the screen is AR navigation, use the actual provided image
+    if (id === 'ar_navigation' || id === 'main_screen') {
+      return (
+        <div className={`relative w-full ${isLarge ? 'h-[360px]' : 'h-[250px]'} rounded-xl bg-slate-950 border border-white/5 overflow-hidden flex flex-col justify-center items-center`}>
+           <img 
+             src="/demo/ar_mapping_demo.png" 
+             alt="AR Mapping Demo" 
+             className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+           />
         </div>
+      );
+    }
 
-        {/* Content representations */}
-        {isMain && (
-          <div className="my-auto space-y-3 text-left">
-            <div className="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
-              <div className="text-[9px] font-mono text-slate-400 leading-none">LOCAL STATION STATUS</div>
-              <div className="text-xs font-semibold text-white mt-1">Apex Block • Central Lobby</div>
-              <div className="h-1 w-full bg-slate-950 rounded mt-2 overflow-hidden">
-                <div className="h-full w-2/3 bg-blue-500 rounded"></div>
-              </div>
-            </div>
-            <div className="grid grid-cols-2 gap-2">
-              <div className="p-2 rounded bg-slate-900/60 border border-slate-850">
-                <div className="text-[7px] text-slate-500 font-mono">LATENCY</div>
-                <div className="text-xs font-bold text-cyan-400 mt-0.5">&lt;14ms</div>
-              </div>
-              <div className="p-2 rounded bg-slate-900/60 border border-slate-850">
-                <div className="text-[7px] text-slate-500 font-mono">CACHE</div>
-                <div className="text-xs font-bold text-emerald-400 mt-0.5">LOCAL</div>
-              </div>
-            </div>
+    // For other screens, display a coming soon or stylized placeholder
+    return (
+      <div className={`relative w-full ${isLarge ? 'h-[360px]' : 'h-[250px]'} rounded-xl bg-slate-950 border border-white/5 overflow-hidden flex flex-col justify-center items-center bg-dots`}>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-950/80"></div>
+        <div className="text-center z-10 p-4">
+          <div className="w-12 h-12 rounded-full bg-slate-900/80 border border-white/10 flex items-center justify-center mx-auto mb-3 text-cyan-400">
+             {getScreenIcon(id)}
           </div>
-        )}
-
-        {isScan && (
-          <div className="my-auto relative flex flex-col items-center justify-center py-4">
-            <div className="w-20 h-20 rounded-xl border border-dashed border-cyan-500 flex items-center justify-center relative bg-slate-900/60">
-              <QrCode size={32} className="text-cyan-400 animate-pulse" />
-              <div className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-cyan-400"></div>
-              <div className="absolute top-0 right-0 w-2 h-2 border-t-2 border-r-2 border-cyan-400"></div>
-              <div className="absolute bottom-0 left-0 w-2 h-2 border-b-2 border-l-2 border-cyan-400"></div>
-              <div className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-cyan-400"></div>
-              {/* Red slider line */}
-              <div className="absolute left-0 right-0 h-0.5 bg-red-400/80 animate-[bounce_2s_infinite]"></div>
-            </div>
-            <span className="text-[8px] font-mono text-slate-500 mt-2">DECRYPTING COORD HASH...</span>
-          </div>
-        )}
-
-        {isSearch && (
-          <div className="my-auto space-y-2 text-left">
-            <div className="bg-slate-900 border border-slate-850 p-1.5 rounded-lg flex items-center gap-1">
-              <Search size={10} className="text-slate-400" />
-              <div className="text-[9px] font-mono text-slate-300">"Seminar hall AI DS"</div>
-            </div>
-            <div className="space-y-1">
-              <div className="p-1 rounded bg-slate-900/40 text-[8px] text-slate-200 border border-white/5">
-                ✦ AI & DS Seminar Hall - Floor 2 [APEX]
-              </div>
-              <div className="p-1 rounded bg-slate-900/40 text-[8px] text-slate-500">
-                HOD Office Dept - Floor 2 [APEX]
-              </div>
-            </div>
-          </div>
-        )}
-
-        {isAr && (
-          <div className="my-auto relative flex flex-col items-center justify-center">
-            {/* Glowing AR pathway overlay lines */}
-            <svg className="absolute inset-0 w-full h-[100px] pointer-events-none">
-              <path d="M 10 90 L 50 40 L 90 90" fill="none" stroke="rgba(24,200,200,0.5)" strokeWidth="4" strokeLinecap="round" strokeDasharray="3,3" />
-              <path d="M 10 90 L 50 40 L 90 90" fill="none" stroke="#00d8d6" strokeWidth="1.5" />
-            </svg>
-            <div className="relative z-10 bg-slate-900/95 border border-cyan-500/20 px-2 py-1 rounded shadow-lg text-center">
-              <Navigation size={12} className="text-cyan-400 mx-auto animate-bounce" />
-              <div className="text-[8px] font-mono text-white font-bold mt-1">RIGHT TURN IN 10m</div>
-            </div>
-            <div className="absolute bottom-1 right-1 text-[7px] font-mono text-slate-500">POSE_EST: STABLE</div>
-          </div>
-        )}
-
-        {isAi && (
-          <div className="my-auto space-y-2 text-left">
-            <div className="bg-slate-900 border border-slate-850/80 p-2 rounded-lg text-left">
-              <span className="text-[7px] font-mono text-cyan-400 block mb-0.5">OLLAMA DEPLOYED</span>
-              <p className="text-[9px] leading-relaxed text-slate-300">
-                "Lead me to the shortest segment avoiding any stair construction."
-              </p>
-            </div>
-            <div className="text-[8px] font-mono text-slate-500 text-right">✦ CALCULATING NODES...</div>
-          </div>
-        )}
-
-        {/* Screen footer inside wireframe */}
-        <div className="border-t border-white/5 pt-2 flex justify-between items-center text-[7px] font-mono text-slate-500 leading-none">
-          <span>PORT: 3000</span>
-          <span>96% LATENCY SAFE</span>
+          <div className="text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-1">MODULE ONLINE</div>
+          <div className="text-sm font-bold text-slate-300">System Telemetry Connected</div>
         </div>
       </div>
     );

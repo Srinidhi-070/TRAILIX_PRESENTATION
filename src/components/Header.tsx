@@ -17,7 +17,6 @@ export default function Header() {
     { label: 'Overview', href: '#overview' },
     { label: 'Problem', href: '#problem' },
     { label: 'Solution', href: '#solution' },
-    { label: 'Live Simulator', href: '#demo' },
     { label: 'Architecture', href: '#architecture' },
     { label: 'Metrics', href: '#metrics' },
     { label: 'Team', href: '#team' }
@@ -99,13 +98,6 @@ export default function Header() {
             <span className="text-[9px] font-mono text-slate-500 text-left">
               M. S. Ramaiah Institute of Technology
             </span>
-            <a
-              href="#demo"
-              onClick={() => setMobileMenuOpen(false)}
-              className="w-full text-center py-2.5 bg-gradient-to-r from-blue-600 to-cyan-500 text-xs font-mono text-white rounded-xl font-semibold block"
-            >
-              Launch Live Simulator
-            </a>
           </div>
         </div>
       )}
