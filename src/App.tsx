@@ -91,6 +91,29 @@ export default function App() {
 
       <Footer />
 
+      {/* Theme Toggle Floating Action Button */}
+      <button
+        onClick={() => {
+          const root = window.document.documentElement;
+          const isDark = root.classList.contains('dark');
+          const newTheme = isDark ? 'light' : 'dark';
+          root.classList.remove('light', 'dark');
+          root.classList.add(newTheme);
+          localStorage.setItem('trailix-ui-theme', newTheme);
+          // Dispatch a custom event so ThemeProvider syncs if needed
+          window.dispatchEvent(new Event('storage'));
+        }}
+        className="fixed bottom-6 left-6 md:bottom-8 md:left-8 z-50 p-4 rounded-full shadow-lg dark:shadow-[0_0_30px_rgba(0,0,0,0.5)] transition-all duration-300 flex items-center justify-center gap-2 group border-2 bg-slate-100/80 border-slate-300/50 text-slate-700 hover:bg-slate-200/80 shadow-[0_0_20px_rgba(0,0,0,0.1)] dark:bg-slate-800/80 dark:border-slate-700/50 dark:text-slate-300 dark:hover:bg-slate-700/80 dark:shadow-[0_0_20px_rgba(255,255,255,0.05)] backdrop-blur-xl cursor-pointer"
+        title="Toggle Light/Dark Theme"
+      >
+        <span className="hidden dark:block"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></span>
+        <span className="block dark:hidden"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span>
+        <span className="text-[10px] sm:text-xs font-bold font-mono tracking-widest max-w-0 overflow-hidden group-hover:max-w-[200px] transition-all duration-500 ease-in-out whitespace-nowrap opacity-0 group-hover:opacity-100 group-hover:ml-1">
+          <span className="hidden dark:inline">LIGHT MODE</span>
+          <span className="inline dark:hidden">DARK MODE</span>
+        </span>
+      </button>
+
       {/* Auto-Scroll Floating Action Button */}
       <button
         onClick={() => setAutoScroll(!autoScroll)}
