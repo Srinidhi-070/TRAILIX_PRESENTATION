@@ -157,7 +157,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="overview" className="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden bg-navy-950 bg-grid-pattern">
+    <section id="overview" className="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden bg-white dark:bg-navy-950 bg-grid-pattern">
       <input 
         ref={fileInputRef}
         type="file"
@@ -201,13 +201,13 @@ export default function Hero() {
                 <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400">AR Spatial Navigation</span>
               </h1>
-              <h2 className="text-lg sm:text-xl font-display font-medium text-slate-200 tracking-tight leading-relaxed max-w-2xl">
+              <h2 className="text-lg sm:text-xl font-display font-medium text-slate-800 dark:text-slate-200 tracking-tight leading-relaxed max-w-2xl">
                 Augmented Reality Spatial Intelligence System for Smart Campus Navigation and Interaction
               </h2>
             </div>
 
             {/* Description */}
-            <p className="text-base sm:text-lg text-slate-400 font-sans leading-relaxed max-w-xl">
+            <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 font-sans leading-relaxed max-w-xl">
               Trailix transforms campus navigation through immersive Augmented Reality overlays, decentralized QR localization, high-throughput A* pathfinding networks, and natural language AI assistance.
             </p>
 
@@ -220,7 +220,7 @@ export default function Hero() {
                 <span className="w-10 h-10 rounded-full border-2 border-[#020617] bg-[#1e293b] flex items-center justify-center text-[10px] font-bold">MN</span>
               </div>
               <div className="text-sm flex flex-col justify-center">
-                <span className="text-slate-200 font-bold leading-none">Engineering Team</span>
+                <span className="text-slate-800 dark:text-slate-200 font-bold leading-none">Engineering Team</span>
                 <span className="text-slate-500 text-xs mt-0.5 font-mono">AI & DS Dept • 2026 Batch</span>
               </div>
             </div>
@@ -228,9 +228,9 @@ export default function Hero() {
             {/* Direct video drag-and-drop or touch triggers stay active directly on the emulator chassis */}
 
             {/* Meta statistics footer */}
-            <div className="pt-8 border-t border-white/5 grid grid-cols-3 gap-6">
+            <div className="pt-8 border-t border-slate-200 dark:border-white/5 grid grid-cols-3 gap-6">
               <div>
-                <div className="text-2.5xl sm:text-3xl font-display font-bold text-white tracking-tight">60 FPS</div>
+                <div className="text-2.5xl sm:text-3xl font-display font-bold text-black dark:text-white tracking-tight">60 FPS</div>
                 <div className="text-[10px] font-mono text-slate-500 mt-1 uppercase tracking-wider">Smooth Unity AR</div>
               </div>
               <div>
@@ -238,7 +238,7 @@ export default function Hero() {
                 <div className="text-[10px] font-mono text-slate-500 mt-1 uppercase tracking-wider">Complex Pathfinding</div>
               </div>
               <div>
-                <div className="text-2.5xl sm:text-3xl font-display font-bold text-white tracking-tight">Zero</div>
+                <div className="text-2.5xl sm:text-3xl font-display font-bold text-black dark:text-white tracking-tight">Zero</div>
                 <div className="text-[10px] font-mono text-slate-500 mt-1 uppercase tracking-wider">External GPS Dependency</div>
               </div>
             </div>
@@ -253,10 +253,10 @@ export default function Hero() {
               onDragOver={handleDragOver}
               onDragLeave={handleDragLeave}
               onDrop={handleDrop}
-              className={`relative w-full max-w-[325px] aspect-[9/16] bg-slate-950 rounded-[44px] p-2.5 shadow-[0_0_50px_rgba(6,182,212,0.15)] border-4 transition-all duration-300 select-none overflow-hidden ${
+              className={`relative w-full max-w-[325px] aspect-[9/16] bg-slate-50 dark:bg-slate-950 rounded-[44px] p-2.5 shadow-[0_0_50px_rgba(6,182,212,0.15)] border-4 transition-all duration-300 select-none overflow-hidden ${
                 dragOver 
                   ? 'border-cyan-400 scale-[1.02] shadow-[0_0_60px_rgba(6,182,212,0.3)]' 
-                  : 'border-slate-800/80 hover:border-slate-700/60'
+                  : 'border-slate-300 dark:border-slate-800/80 hover:border-slate-700/60'
               } ring-1 ring-slate-700/30 flex flex-col justify-between`}
             >
               
@@ -273,13 +273,13 @@ export default function Hero() {
                   />
                   
                   {/* Subtle video status tag */}
-                  <div className="absolute top-6 left-1/2 -translate-x-1/2 px-2.5 py-1 bg-slate-950/80 border border-cyan-500/20 text-cyan-400 text-[8px] font-mono rounded-full font-bold uppercase tracking-wider flex items-center gap-1.5 backdrop-blur-sm z-30 opacity-75">
+                  <div className="absolute top-6 left-1/2 -translate-x-1/2 px-2.5 py-1 bg-slate-50 dark:bg-slate-950/80 border border-cyan-500/20 text-cyan-400 text-[8px] font-mono rounded-full font-bold uppercase tracking-wider flex items-center gap-1.5 backdrop-blur-sm z-30 opacity-75">
                     <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
                     PRESENTATION FEED
                   </div>
 
                   {/* Playback Controls layer (revealed on hover) */}
-                  <div className="absolute inset-x-3 bottom-3 p-2 bg-slate-950/85 border border-white/5 backdrop-blur-md rounded-2xl flex flex-col gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-30">
+                  <div className="absolute inset-x-3 bottom-3 p-2 bg-slate-50 dark:bg-slate-950/85 border border-slate-200 dark:border-white/5 backdrop-blur-md rounded-2xl flex flex-col gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-30">
                     <div className="flex items-center gap-2">
                       <input
                         type="range"
@@ -287,26 +287,26 @@ export default function Hero() {
                         max={duration || 100}
                         value={currentTime}
                         onChange={handleSeek}
-                        className="w-full h-1 bg-slate-800 rounded-full cursor-pointer accent-cyan-400 focus:outline-none"
+                        className="w-full h-1 bg-slate-100 dark:bg-slate-800 rounded-full cursor-pointer accent-cyan-400 focus:outline-none"
                       />
                     </div>
                     
                     <div className="flex items-center justify-between">
                       <button 
                         onClick={togglePlay}
-                        className="p-1 text-slate-300 hover:text-white transition cursor-pointer"
+                        className="p-1 text-slate-700 dark:text-slate-300 hover:text-black dark:text-white transition cursor-pointer"
                       >
                         {isPlaying ? <Pause size={13} className="fill-slate-300" /> : <Play size={13} className="fill-slate-300" />}
                       </button>
                       
-                      <span className="text-[8px] font-mono text-slate-400">
+                      <span className="text-[8px] font-mono text-slate-600 dark:text-slate-400">
                         {formatTime(currentTime)} / {formatTime(duration)}
                       </span>
 
                       <div className="flex items-center gap-1.5">
                         <button 
                           onClick={() => setIsMuted(!isMuted)}
-                          className="p-1 text-slate-300 hover:text-white transition cursor-pointer"
+                          className="p-1 text-slate-700 dark:text-slate-300 hover:text-black dark:text-white transition cursor-pointer"
                         >
                           {isMuted ? <VolumeX size={13} /> : <Volume2 size={13} />}
                         </button>
@@ -350,7 +350,7 @@ export default function Hero() {
                       <div className="text-[10px] font-mono font-bold text-cyan-400 uppercase tracking-widest animate-pulse leading-none">
                         AR VIEWPORT ACTIVE
                       </div>
-                      <p className="text-[9px] text-slate-400 uppercase font-bold tracking-wider leading-none">
+                      <p className="text-[9px] text-slate-600 dark:text-slate-400 uppercase font-bold tracking-wider leading-none">
                         Drag & Drop Screen capture
                       </p>
                       <p className="text-[8px] text-slate-500 font-sans leading-tight">
@@ -360,8 +360,8 @@ export default function Hero() {
                   </div>
 
                   {/* Glassmorphic interactive action deck */}
-                  <div className="p-3 rounded-xl bg-slate-900/90 border border-white/5 space-y-1.5 text-left relative overflow-hidden">
-                    <div className="flex justify-between items-center text-[7px] font-mono text-slate-400 leading-none">
+                  <div className="p-3 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-white/5 space-y-1.5 text-left relative overflow-hidden">
+                    <div className="flex justify-between items-center text-[7px] font-mono text-slate-600 dark:text-slate-400 leading-none">
                       <span>WALKTHROUGH PLAYER</span>
                       <span className="text-cyan-400 font-bold">READY</span>
                     </div>

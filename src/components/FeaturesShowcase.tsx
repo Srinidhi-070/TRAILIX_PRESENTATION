@@ -26,7 +26,7 @@ export default function FeaturesShowcase() {
   ];
 
   return (
-    <section id="key-achievements" className="relative py-24 bg-navy-950 bg-grid-pattern">
+    <section id="key-achievements" className="relative py-24 bg-white dark:bg-navy-950 bg-grid-pattern">
       
       {/* Dynamic background lights */}
       <div className="absolute top-1/2 left-1/4 w-[450px] h-[450px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
@@ -39,10 +39,10 @@ export default function FeaturesShowcase() {
             <Award size={12} />
             KEY ACHIEVEMENTS
           </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-black dark:text-white tracking-tight">
             {KEY_ACHIEVEMENTS.title}
           </h2>
-          <p className="text-slate-400 text-sm md:text-base leading-relaxed font-sans">
+          <p className="text-slate-600 dark:text-slate-400 text-sm md:text-base leading-relaxed font-sans">
             Our system is engineered to provide premium campus-wide positioning without relying on shaky global satellite setups. Discover what sets our spatial intelligence stack apart.
           </p>
         </div>
@@ -52,23 +52,23 @@ export default function FeaturesShowcase() {
           {KEY_ACHIEVEMENTS.achievements.map((achievement, idx) => (
             <div 
               key={idx}
-              className="p-6 rounded-2xl bg-slate-900/50 border border-white/5 hover:border-cyan-500/30 hover:bg-slate-900 transition-all duration-300 text-left flex flex-col justify-between group"
+              className="p-6 rounded-2xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-white/5 hover:border-cyan-500/30 hover:bg-white dark:bg-slate-900 transition-all duration-300 text-left flex flex-col justify-between group"
             >
               <div className="space-y-5">
                 <div className="flex justify-between items-start">
-                  <div className="p-2 ml-0 rounded-xl bg-slate-950 border border-white/10 shadow-inner">
+                  <div className="p-2 ml-0 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-white/10 shadow-inner">
                     {getIcon(idx, colors[idx % colors.length])}
                   </div>
-                  <span className="text-[9px] font-mono font-bold text-slate-500 uppercase tracking-widest leading-none bg-slate-950/40 px-1.5 py-0.5 rounded border border-white/5">
+                  <span className="text-[9px] font-mono font-bold text-slate-500 uppercase tracking-widest leading-none bg-slate-50 dark:bg-slate-950/40 px-1.5 py-0.5 rounded border border-slate-200 dark:border-white/5">
                     ACHIEVED
                   </span>
                 </div>
 
                 <div className="space-y-1.5">
-                  <h4 className="text-base font-bold text-slate-200 group-hover:text-white transition">
+                  <h4 className="text-base font-bold text-slate-800 dark:text-slate-200 group-hover:text-black dark:text-white transition">
                     {achievement.title}
                   </h4>
-                  <p className="text-xs text-slate-400 leading-relaxed font-sans min-h-[48px]">
+                  <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-sans min-h-[48px]">
                     {achievement.description}
                   </p>
                 </div>

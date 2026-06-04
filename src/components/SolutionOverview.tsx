@@ -19,7 +19,7 @@ export default function SolutionOverview() {
   };
 
   return (
-    <section id="solution" className="relative py-24 bg-navy-950 bg-grid-pattern">
+    <section id="solution" className="relative py-24 bg-white dark:bg-navy-950 bg-grid-pattern">
       
       {/* Background glowing gradients offset */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-400/5 rounded-full blur-[120px] pointer-events-none"></div>
@@ -32,10 +32,10 @@ export default function SolutionOverview() {
             <Bot size={12} className="animate-bounce" />
             Introducing the Solution
           </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-black dark:text-white tracking-tight">
             {OUR_SOLUTION.title}
           </h2>
-          <div className="text-slate-400 text-sm md:text-base leading-relaxed max-w-2xl mx-auto font-sans space-y-3">
+          <div className="text-slate-600 dark:text-slate-400 text-sm md:text-base leading-relaxed max-w-2xl mx-auto font-sans space-y-3">
             {OUR_SOLUTION.subtitle.split('\n\n').map((para, idx) => (
               <p key={idx}>{para}</p>
             ))}
@@ -47,19 +47,19 @@ export default function SolutionOverview() {
           {OUR_SOLUTION.features.map((feature) => (
             <div 
               key={feature.id}
-              className="p-6 rounded-2xl bg-slate-900/40 border border-white/5 hover:border-cyan-500/30 hover:bg-slate-900/80 hover:shadow-[0_0_40px_rgba(6,182,212,0.1)] transition-all duration-300 text-left flex flex-col justify-between group"
+              className="p-6 rounded-2xl bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-white/5 hover:border-cyan-500/30 hover:bg-white dark:bg-slate-900/80 hover:shadow-[0_0_40px_rgba(6,182,212,0.1)] transition-all duration-300 text-left flex flex-col justify-between group"
             >
               <div className="space-y-6">
                 {/* Icon wrapper */}
-                <div className="w-11 h-11 ml-0 rounded-xl bg-slate-950 flex items-center justify-center border border-white/10 group-hover:border-slate-700/80 group-hover:bg-slate-900/60 shadow-lg shadow-black/40 transition duration-300">
+                <div className="w-11 h-11 ml-0 rounded-xl bg-slate-50 dark:bg-slate-950 flex items-center justify-center border border-slate-300 dark:border-white/10 group-hover:border-slate-700/80 group-hover:bg-white dark:bg-slate-900/60 shadow-lg shadow-black/40 transition duration-300">
                   {getIcon(feature.icon)}
                 </div>
 
                 <div className="space-y-2">
-                  <h3 className="text-lg font-display font-bold text-white tracking-tight">
+                  <h3 className="text-lg font-display font-bold text-black dark:text-white tracking-tight">
                     {feature.title}
                   </h3>
-                  <p className="text-xs text-slate-400 leading-relaxed font-sans min-h-[50px]">
+                  <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-sans min-h-[50px]">
                     {feature.description}
                   </p>
                 </div>
@@ -77,16 +77,16 @@ export default function SolutionOverview() {
         </div>
 
         {/* Call to action connecting solution to sandbox */}
-        <div className="p-8 rounded-3xl bg-slate-900/50 border border-white/5 relative overflow-hidden text-left flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+        <div className="p-8 rounded-3xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-white/5 relative overflow-hidden text-left flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
           <div className="space-y-2">
-            <h4 className="text-lg font-display font-bold text-white">Experience our pillars in the live simulator below</h4>
-            <p className="text-xs text-slate-400 font-sans max-w-2xl">
+            <h4 className="text-lg font-display font-bold text-black dark:text-white">Experience our pillars in the live simulator below</h4>
+            <p className="text-xs text-slate-600 dark:text-slate-400 font-sans max-w-2xl">
               Take our interactive simulation widget for a spin to search nodes, scan barcodes, and calculate optimum steps with the A* algorithm!
             </p>
           </div>
           <a
             href="#demo"
-            className="px-5 py-2.5 bg-slate-950 hover:bg-slate-900 border border-white/5 hover:border-slate-700 text-xs font-mono text-cyan-400 font-semibold rounded-xl tracking-wider uppercase transition inline-flex items-center gap-1.5 flex-shrink-0 cursor-pointer"
+            className="px-5 py-2.5 bg-slate-50 dark:bg-slate-950 hover:bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5 hover:border-slate-700 text-xs font-mono text-cyan-400 font-semibold rounded-xl tracking-wider uppercase transition inline-flex items-center gap-1.5 flex-shrink-0 cursor-pointer"
           >
             Launch Live Simulator
             <ArrowDown size={12} className="animate-bounce" />

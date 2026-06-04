@@ -47,7 +47,7 @@ export default function Architecture() {
   };
 
   const getIconForType = (type: string) => {
-    if (type === 'user') return <Eye className="text-white" size={20} />;
+    if (type === 'user') return <Eye className="text-black dark:text-white" size={20} />;
     if (type === 'db') return <Database className="text-emerald-400" size={20} />;
     return <Cpu className="text-cyan-400" size={20} />;
   };
@@ -80,7 +80,7 @@ export default function Architecture() {
   };
 
   return (
-    <section id="architecture" className="relative py-24 bg-navy-950 bg-grid-pattern overflow-hidden">
+    <section id="architecture" className="relative py-24 bg-white dark:bg-navy-950 bg-grid-pattern overflow-hidden">
       
       {/* Visual lighting background */}
       <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-cyan-500/5 rounded-full blur-[150px] pointer-events-none"></div>
@@ -98,23 +98,23 @@ export default function Architecture() {
             <Workflow size={12} className="animate-pulse" />
             DIAGRAM 6.2 SPECIFICATION
           </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-black dark:text-white tracking-tight">
             System Architecture
           </h2>
-          <p className="text-slate-400 text-sm md:text-base leading-relaxed font-sans max-w-xl mx-auto">
+          <p className="text-slate-600 dark:text-slate-400 text-sm md:text-base leading-relaxed font-sans max-w-xl mx-auto">
             Click on any node in the architecture diagram to inspect its functional responsibilities within the TRAILIX stack.
           </p>
         </motion.div>
 
         {/* Interactive Node Graph Map (Hidden on mobile, uses fallback flex layout) */}
-        <div className="hidden lg:block relative w-full h-[650px] md:h-[800px] bg-slate-900/60 rounded-3xl border border-white/10 backdrop-blur-md shadow-2xl mb-16 overflow-hidden">
+        <div className="hidden lg:block relative w-full h-[650px] md:h-[800px] bg-white dark:bg-slate-900/60 rounded-3xl border border-slate-300 dark:border-white/10 backdrop-blur-md shadow-2xl mb-16 overflow-hidden">
           
           {/* Conceptual Boundaries (Unity AR & FastAPI) */}
           <div className="absolute top-[22%] left-[5%] right-[5%] h-[20%] border-2 border-dashed border-cyan-500/30 rounded-xl bg-cyan-950/10 pointer-events-none">
-             <span className="absolute -top-3 left-6 bg-slate-900 px-2 text-[10px] font-mono text-cyan-500">Unity AR (Client)</span>
+             <span className="absolute -top-3 left-6 bg-white dark:bg-slate-900 px-2 text-[10px] font-mono text-cyan-500">Unity AR (Client)</span>
           </div>
           <div className="absolute top-[52%] left-[35%] right-[35%] h-[32%] border-2 border-dashed border-purple-500/30 rounded-xl bg-purple-950/10 pointer-events-none">
-             <span className="absolute -top-3 left-6 bg-slate-900 px-2 text-[10px] font-mono text-purple-500">FastAPI (Server)</span>
+             <span className="absolute -top-3 left-6 bg-white dark:bg-slate-900 px-2 text-[10px] font-mono text-purple-500">FastAPI (Server)</span>
           </div>
 
           {/* SVG Connectors Layer */}
@@ -181,21 +181,21 @@ export default function Architecture() {
                   onMouseLeave={() => setHoveredNode(null)}
                   onClick={() => setSelectedNode(isSelected ? null : idx)}
                   style={{ left: `${node.x}%`, top: `${node.y}%` }}
-                  className={`absolute -translate-x-1/2 -translate-y-1/2 w-28 lg:w-32 p-2 rounded-xl bg-slate-900 border transition-all duration-300 cursor-pointer flex flex-col items-center text-center shadow-xl
-                    ${isSelected ? 'border-emerald-400 scale-110 z-40 shadow-[0_0_40px_rgba(16,185,129,0.3)] bg-slate-800' : 
-                      isHovered ? 'border-cyan-400 scale-105 z-30 shadow-[0_0_30px_rgba(6,182,212,0.3)] bg-slate-800' : 
-                      'border-white/10 hover:border-cyan-500/30 z-10'}
+                  className={`absolute -translate-x-1/2 -translate-y-1/2 w-28 lg:w-32 p-2 rounded-xl bg-white dark:bg-slate-900 border transition-all duration-300 cursor-pointer flex flex-col items-center text-center shadow-xl
+                    ${isSelected ? 'border-emerald-400 scale-110 z-40 shadow-[0_0_40px_rgba(16,185,129,0.3)] bg-slate-100 dark:bg-slate-800' : 
+                      isHovered ? 'border-cyan-400 scale-105 z-30 shadow-[0_0_30px_rgba(6,182,212,0.3)] bg-slate-100 dark:bg-slate-800' : 
+                      'border-slate-300 dark:border-white/10 hover:border-cyan-500/30 z-10'}
                     ${isFaded ? 'opacity-40 blur-[1px]' : 'opacity-100'}
                   `}
                 >
                   <div className={`w-8 h-8 rounded-lg mb-1.5 flex items-center justify-center border shadow-inner transition-colors duration-300
                     ${isSelected ? 'bg-emerald-950/50 border-emerald-500/50' : 
                       isHovered ? 'bg-cyan-950/50 border-cyan-500/50' : 
-                      'bg-slate-950 border-white/10'}
+                      'bg-slate-50 dark:bg-slate-950 border-slate-300 dark:border-white/10'}
                   `}>
                     {getIconForType(node.type)}
                   </div>
-                  <h4 className={`text-[11px] lg:text-xs font-bold leading-tight ${isSelected ? 'text-emerald-400' : 'text-slate-100'}`}>
+                  <h4 className={`text-[11px] lg:text-xs font-bold leading-tight ${isSelected ? 'text-emerald-400' : 'text-black dark:text-slate-100'}`}>
                     {node.label}
                   </h4>
                 </motion.div>
@@ -208,20 +208,20 @@ export default function Architecture() {
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="absolute bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-md bg-slate-900/95 border border-emerald-500/50 rounded-2xl p-5 shadow-[0_0_50px_rgba(16,185,129,0.2)] backdrop-blur-xl z-50 flex items-start gap-4"
+              className="absolute bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-md bg-white dark:bg-slate-900/95 border border-emerald-500/50 rounded-2xl p-5 shadow-[0_0_50px_rgba(16,185,129,0.2)] backdrop-blur-xl z-50 flex items-start gap-4"
             >
               <div className="w-12 h-12 shrink-0 rounded-xl bg-emerald-950 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
                 {getIconForType(nodes[selectedNode].type)}
               </div>
               <div>
                 <div className="text-[10px] font-mono text-emerald-400 uppercase tracking-widest mb-1">NODE INSPECTOR</div>
-                <h3 className="text-lg font-bold text-white mb-2">{nodes[selectedNode].label}</h3>
-                <p className="text-xs text-slate-300 leading-relaxed">
+                <h3 className="text-lg font-bold text-black dark:text-white mb-2">{nodes[selectedNode].label}</h3>
+                <p className="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
                   {nodes[selectedNode].desc}
                 </p>
                 <button 
                   onClick={() => setSelectedNode(null)}
-                  className="mt-3 text-[10px] font-mono text-slate-400 hover:text-white transition-colors underline"
+                  className="mt-3 text-[10px] font-mono text-slate-600 dark:text-slate-400 hover:text-black dark:text-white transition-colors underline"
                 >
                   Close Inspector
                 </button>
@@ -239,17 +239,17 @@ export default function Architecture() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="p-5 rounded-2xl bg-slate-900/80 border border-white/5 flex items-center gap-4"
+              className="p-5 rounded-2xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-white/5 flex items-center gap-4"
             >
-              <div className="w-12 h-12 rounded-lg bg-slate-950 flex items-center justify-center border border-white/10 shrink-0">
+              <div className="w-12 h-12 rounded-lg bg-slate-50 dark:bg-slate-950 flex items-center justify-center border border-slate-300 dark:border-white/10 shrink-0">
                 {getIconForType(node.type)}
               </div>
               <div>
                 <div className="text-[10px] font-mono text-cyan-400 uppercase tracking-widest leading-none mb-1">
                   {node.type === 'user' ? 'CLIENT' : node.type === 'db' ? 'DATABASE' : 'SYSTEM MODULE'}
                 </div>
-                <h4 className="text-sm font-bold text-slate-100 leading-tight mb-1">{node.label}</h4>
-                <p className="text-xs text-slate-400 leading-tight">{node.desc}</p>
+                <h4 className="text-sm font-bold text-black dark:text-slate-100 leading-tight mb-1">{node.label}</h4>
+                <p className="text-xs text-slate-600 dark:text-slate-400 leading-tight">{node.desc}</p>
               </div>
             </motion.div>
           ))}
@@ -261,10 +261,10 @@ export default function Architecture() {
             initial={{ opacity: 0, x: -20 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex items-center gap-3 mb-10 border-b border-white/5 pb-4"
+            className="flex items-center gap-3 mb-10 border-b border-slate-200 dark:border-white/5 pb-4"
           >
             <Workflow className="text-cyan-400" size={24} />
-            <h3 className="text-2xl font-bold text-white tracking-tight">Data Flow Sequence</h3>
+            <h3 className="text-2xl font-bold text-black dark:text-white tracking-tight">Data Flow Sequence</h3>
           </motion.div>
           
           <div className="relative">
@@ -298,16 +298,16 @@ export default function Architecture() {
                     initial={{ scale: 0 }}
                     animate={isInView ? { scale: 1 } : { scale: 0 }}
                     transition={{ delay: 0.5 + (idx * 0.1), type: "spring" }}
-                    className="absolute left-[14px] top-1/2 -translate-y-1/2 w-3.5 h-3.5 rounded-full bg-slate-950 border-2 border-cyan-500 group-hover:bg-cyan-400 group-hover:scale-125 transition-all duration-300 shadow-[0_0_10px_rgba(6,182,212,0.5)] z-10"
+                    className="absolute left-[14px] top-1/2 -translate-y-1/2 w-3.5 h-3.5 rounded-full bg-slate-50 dark:bg-slate-950 border-2 border-cyan-500 group-hover:bg-cyan-400 group-hover:scale-125 transition-all duration-300 shadow-[0_0_10px_rgba(6,182,212,0.5)] z-10"
                   />
                   
-                  <div className="p-4 rounded-xl bg-slate-900/50 border border-white/5 group-hover:border-cyan-500/30 group-hover:bg-slate-800/80 transition-all duration-300 backdrop-blur-md flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-lg group-hover:shadow-[0_0_20px_rgba(6,182,212,0.1)] overflow-hidden relative">
+                  <div className="p-4 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-white/5 group-hover:border-cyan-500/30 group-hover:bg-slate-100 dark:bg-slate-800/80 transition-all duration-300 backdrop-blur-md flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-lg group-hover:shadow-[0_0_20px_rgba(6,182,212,0.1)] overflow-hidden relative">
                     
                     {/* Hover glow effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 -translate-x-full group-hover:translate-x-full transition-all duration-1000 ease-in-out pointer-events-none"></div>
 
                     <div className="flex items-center gap-4 relative z-10">
-                      <div className="text-[11px] font-mono font-bold text-cyan-400 bg-cyan-950/70 px-2.5 py-1.5 rounded border border-cyan-900 w-9 flex justify-center shrink-0 group-hover:bg-cyan-500 group-hover:text-white transition-colors">
+                      <div className="text-[11px] font-mono font-bold text-cyan-400 bg-cyan-950/70 px-2.5 py-1.5 rounded border border-cyan-900 w-9 flex justify-center shrink-0 group-hover:bg-cyan-500 group-hover:text-black dark:text-white transition-colors">
                         {step.id}
                       </div>
                       <div>
@@ -315,12 +315,12 @@ export default function Architecture() {
                           {step.actor}
                           <ArrowRight size={10} className="text-slate-600 group-hover:text-cyan-400 transition-colors" />
                         </div>
-                        <div className="text-sm font-semibold text-slate-200 group-hover:text-white transition-colors">{step.action}</div>
+                        <div className="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover:text-black dark:text-white transition-colors">{step.action}</div>
                       </div>
                     </div>
                     
                     {step.target !== 'Local Core' && (
-                      <div className="flex items-center gap-2 text-[10px] font-mono text-slate-400 shrink-0 bg-slate-950 px-3 py-1.5 rounded-lg border border-white/10 group-hover:border-emerald-500/30 relative z-10">
+                      <div className="flex items-center gap-2 text-[10px] font-mono text-slate-600 dark:text-slate-400 shrink-0 bg-slate-50 dark:bg-slate-950 px-3 py-1.5 rounded-lg border border-slate-300 dark:border-white/10 group-hover:border-emerald-500/30 relative z-10">
                         <Activity size={12} className="text-emerald-400 group-hover:animate-pulse" />
                         <span className="group-hover:text-emerald-300 transition-colors">{step.target}</span>
                       </div>

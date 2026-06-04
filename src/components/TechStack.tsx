@@ -20,7 +20,7 @@ export default function TechStack() {
   });
 
   return (
-    <section id="tech" className="relative py-24 bg-navy-950/40 border-t border-white/5 overflow-hidden">
+    <section id="tech" className="relative py-24 bg-white dark:bg-navy-950/40 border-t border-slate-200 dark:border-white/5 overflow-hidden">
       
       {/* Background light shapes */}
       <div className="absolute top-1/4 right-1/4 w-[350px] h-[350px] bg-blue-600/5 rounded-full blur-[90px] pointer-events-none"></div>
@@ -33,16 +33,16 @@ export default function TechStack() {
             <Shield size={12} />
             Unified Tech Grid
           </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-black dark:text-white tracking-tight">
             Built with Modern Technologies
           </h2>
-          <p className="text-slate-400 text-sm md:text-base leading-relaxed font-sans">
+          <p className="text-slate-600 dark:text-slate-400 text-sm md:text-base leading-relaxed font-sans">
             Engineered using industry-standard high-performance frameworks and development tools. Toggle categories to inspect individual stack layers.
           </p>
         </div>
 
         {/* Tab switcher navigation bar */}
-        <div className="flex flex-wrap justify-center gap-2 mb-10 pb-2 border-b border-white/5">
+        <div className="flex flex-wrap justify-center gap-2 mb-10 pb-2 border-b border-slate-200 dark:border-white/5">
           {tabs.map((tab) => (
             <button
               key={tab.id}
@@ -50,7 +50,7 @@ export default function TechStack() {
               className={`px-4 py-2 rounded-xl text-xs font-mono font-bold uppercase transition-all duration-200 inline-flex items-center gap-2 border cursor-pointer ${
                 activeTab === tab.id 
                   ? 'bg-cyan-500/10 border-cyan-500/40 text-cyan-400 shadow-lg shadow-cyan-950/45' 
-                  : 'bg-transparent border-slate-800/80 text-slate-400 hover:text-slate-200 hover:border-slate-700'
+                  : 'bg-transparent border-slate-300 dark:border-slate-800/80 text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:text-slate-200 hover:border-slate-700'
               }`}
             >
               {tab.icon}
@@ -64,7 +64,7 @@ export default function TechStack() {
           {filteredStack.map((tech) => (
             <div 
               key={tech.name}
-              className="p-6 rounded-2xl bg-slate-900/60 border border-white/5 hover:border-slate-705 transition-all duration-300 text-left flex flex-col justify-between group relative overflow-hidden"
+              className="p-6 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-white/5 hover:border-slate-705 transition-all duration-300 text-left flex flex-col justify-between group relative overflow-hidden"
             >
               <div className={`absolute top-0 right-0 w-24 h-24 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none ${
                 tech.variant === 'cyan' ? 'bg-cyan-500/5' : 
@@ -78,16 +78,16 @@ export default function TechStack() {
                     ? 'bg-cyan-500/10 border-cyan-500/30 text-cyan-400' 
                     : tech.variant === 'electric' 
                       ? 'bg-blue-600/10 border-blue-500/30 text-blue-400' 
-                      : 'bg-slate-950 border-slate-800 text-slate-300'
+                      : 'bg-slate-50 dark:bg-slate-950 border-slate-300 dark:border-slate-800 text-slate-700 dark:text-slate-300'
                 }`}>
                   {tech.logoText}
                 </div>
 
                 <div className="space-y-1.5">
-                  <h4 className="text-base font-bold text-white tracking-tight">
+                  <h4 className="text-base font-bold text-black dark:text-white tracking-tight">
                     {tech.name}
                   </h4>
-                  <p className="text-xs text-slate-400 leading-relaxed font-sans min-h-[48px]">
+                  <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-sans min-h-[48px]">
                     {tech.description}
                   </p>
                 </div>

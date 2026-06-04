@@ -77,7 +77,7 @@ export default function TeamSection() {
   const activeMember = TEAM_MEMBERS.find(m => m.name === selectedMember) || TEAM_MEMBERS[0];
 
   return (
-    <section id="team" className="relative py-24 bg-navy-950 bg-grid-pattern">
+    <section id="team" className="relative py-24 bg-white dark:bg-navy-950 bg-grid-pattern">
       
       {/* Background abstract overlay lights */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-[120px] pointer-events-none"></div>
@@ -90,24 +90,24 @@ export default function TeamSection() {
             <Users size={12} />
             Academic Engineers
           </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-black dark:text-white tracking-tight">
             Collaborative Contributions
           </h2>
-          <p className="text-slate-400 text-sm md:text-base leading-relaxed font-sans max-w-xl mx-auto">
+          <p className="text-slate-600 dark:text-slate-400 text-sm md:text-base leading-relaxed font-sans max-w-xl mx-auto">
             Artificial Intelligence and Data Science engineering students at M. S. Ramaiah Institute of Technology. Click a member's profile card below to explore their specific system ownership, metrics, and architecture modules in detail.
           </p>
         </div>
 
         {/* Advisor / Guide Featured Row */}
         <div className="mb-16">
-          <div className="max-w-4xl mx-auto p-6 md:p-8 rounded-3xl bg-slate-900 border border-white/5 shadow-2xl relative overflow-hidden flex flex-col md:flex-row gap-8 items-center text-left group">
+          <div className="max-w-4xl mx-auto p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5 shadow-2xl relative overflow-hidden flex flex-col md:flex-row gap-8 items-center text-left group">
             
             {/* Interactive cyan neon ring behind */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/10 transition duration-300 pointer-events-none"></div>
             
             {/* Advisor Vector Emblem */}
-            <div className="w-24 h-24 rounded-full bg-slate-950 border-2 border-dashed border-cyan-400/40 flex items-center justify-center relative flex-shrink-0">
-              <div className="w-18 h-18 rounded-full bg-cyan-950/40 border border-white/5 flex items-center justify-center">
+            <div className="w-24 h-24 rounded-full bg-slate-50 dark:bg-slate-950 border-2 border-dashed border-cyan-400/40 flex items-center justify-center relative flex-shrink-0">
+              <div className="w-18 h-18 rounded-full bg-cyan-950/40 border border-slate-200 dark:border-white/5 flex items-center justify-center">
                 <GraduationCap className="text-cyan-400" size={32} />
               </div>
             </div>
@@ -115,13 +115,13 @@ export default function TeamSection() {
             <div className="space-y-4">
               <div className="space-y-1">
                 <span className="text-[10px] font-mono font-bold text-cyan-400 tracking-wider block">PROJECT GUIDE</span>
-                <h3 className="text-2xl font-bold text-white tracking-tight">
+                <h3 className="text-2xl font-bold text-black dark:text-white tracking-tight">
                   {PROJECT_GUIDE.name}
                 </h3>
-                <p className="text-xs font-mono text-slate-300">
+                <p className="text-xs font-mono text-slate-700 dark:text-slate-300">
                   {PROJECT_GUIDE.role}
                 </p>
-                <p className="text-xs font-mono text-slate-400">
+                <p className="text-xs font-mono text-slate-600 dark:text-slate-400">
                   {PROJECT_GUIDE.department}
                 </p>
                 <p className="text-xs font-mono text-slate-500 leading-none">
@@ -129,7 +129,7 @@ export default function TeamSection() {
                 </p>
               </div>
 
-              <p className="text-xs text-slate-400 leading-relaxed font-sans max-w-xl">
+              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-sans max-w-xl">
                 {PROJECT_GUIDE.description}
               </p>
             </div>
@@ -150,7 +150,7 @@ export default function TeamSection() {
                   className={`p-6 rounded-2xl cursor-pointer border text-left flex flex-col justify-between transition-all duration-300 relative group ${
                     isSelected 
                       ? 'bg-gradient-to-br from-cyan-950/45 to-slate-900 border-cyan-500/40 shadow-[0_0_24px_rgba(6,182,212,0.08)] scale-[1.01]' 
-                      : 'bg-slate-900/50 border-white/5 hover:border-slate-700/80'
+                      : 'bg-white dark:bg-slate-900/50 border-slate-200 dark:border-white/5 hover:border-slate-700/80'
                   }`}
                 >
                   {/* Selected neon edge line */}
@@ -164,19 +164,19 @@ export default function TeamSection() {
                       <div className={`w-12 h-12 rounded-xl flex items-center justify-center font-bold text-md transition-all duration-300 border ${
                         isSelected 
                           ? 'bg-cyan-500/10 border-cyan-500/30 text-cyan-400' 
-                          : 'bg-slate-950 border-white/10 text-slate-400 group-hover:text-cyan-400'
+                          : 'bg-slate-50 dark:bg-slate-950 border-slate-300 dark:border-white/10 text-slate-600 dark:text-slate-400 group-hover:text-cyan-400'
                       }`}>
                         {member.name.split(' ').map(n => n[0]).join('')}
                       </div>
 
                       {/* USN identifier */}
-                      <div className="text-[9px] font-mono text-slate-400 bg-slate-950 px-2 py-0.5 rounded border border-white/5">
+                      <div className="text-[9px] font-mono text-slate-600 dark:text-slate-400 bg-slate-50 dark:bg-slate-950 px-2 py-0.5 rounded border border-slate-200 dark:border-white/5">
                         {member.usn}
                       </div>
                     </div>
 
                     <div className="space-y-1">
-                      <h4 className="text-md font-bold text-slate-100 group-hover:text-white transition leading-snug">
+                      <h4 className="text-md font-bold text-black dark:text-slate-100 group-hover:text-black dark:text-white transition leading-snug">
                         {member.name}
                       </h4>
                       <p className="text-xs font-mono text-cyan-400 font-bold tracking-wide">
@@ -184,7 +184,7 @@ export default function TeamSection() {
                       </p>
                     </div>
 
-                    <p className="text-xs text-slate-400 leading-relaxed font-sans min-h-[48px] line-clamp-3">
+                    <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-sans min-h-[48px] line-clamp-3">
                       {member.bio}
                     </p>
                   </div>
@@ -194,7 +194,7 @@ export default function TeamSection() {
                     {member.skills.slice(0, 3).map((skill) => (
                       <span 
                         key={skill}
-                        className="text-[8px] font-mono text-slate-400 bg-slate-950/80 px-1.5 py-0.5 rounded border border-white/5"
+                        className="text-[8px] font-mono text-slate-600 dark:text-slate-400 bg-slate-50 dark:bg-slate-950/80 px-1.5 py-0.5 rounded border border-slate-200 dark:border-white/5"
                       >
                         {skill}
                       </span>
@@ -216,7 +216,7 @@ export default function TeamSection() {
                 initial={{ opacity: 0, scale: 0.99, x: 10 }}
                 animate={{ opacity: 1, scale: 1, x: 0 }}
                 exit={{ opacity: 0, scale: 0.99, x: -10 }}
-                className="p-6 md:p-8 rounded-2xl bg-slate-900 border border-white/5 flex-1 flex flex-col justify-between relative overflow-hidden text-left"
+                className="p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5 flex-1 flex flex-col justify-between relative overflow-hidden text-left"
               >
                 
                 {/* Background accent bulb */}
@@ -225,7 +225,7 @@ export default function TeamSection() {
                 <div className="space-y-6">
                   
                   {/* Ownership header */}
-                  <div className="flex justify-between items-center border-b border-white/5 pb-4">
+                  <div className="flex justify-between items-center border-b border-slate-200 dark:border-white/5 pb-4">
                     <div className="flex items-center gap-2">
                       <div className="p-1 rounded bg-cyan-950 text-cyan-400 border border-cyan-850">
                         <Code2 size={14} />
@@ -239,10 +239,10 @@ export default function TeamSection() {
 
                   {/* Name and Focus area */}
                   <div className="space-y-1">
-                    <h3 className="text-2xl font-bold text-white tracking-tight leading-none">
+                    <h3 className="text-2xl font-bold text-black dark:text-white tracking-tight leading-none">
                       {activeMember.name}
                     </h3>
-                    <div className="flex items-center gap-2 text-xs font-mono text-slate-300">
+                    <div className="flex items-center gap-2 text-xs font-mono text-slate-700 dark:text-slate-300">
                       <span>{activeMember.role}</span>
                       <span className="text-slate-600">•</span>
                       <span className="text-cyan-400 font-semibold">{activeDetails.focus}</span>
@@ -250,15 +250,15 @@ export default function TeamSection() {
                   </div>
 
                   {/* Core biography statement */}
-                  <p className="text-xs sm:text-sm text-slate-300 font-sans leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-sans leading-relaxed">
                     {activeDetails.summary}
                   </p>
 
                   {/* Statistics Metrics Dashboard */}
                   <div className="grid grid-cols-3 gap-3">
                     {activeDetails.statistics.map((metric) => (
-                      <div key={metric.label} className="p-3 rounded-xl bg-slate-950/80 border border-white/5 text-center flex flex-col justify-center">
-                        <div className="text-xl sm:text-2xl font-bold font-mono text-white tracking-tight">
+                      <div key={metric.label} className="p-3 rounded-xl bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-white/5 text-center flex flex-col justify-center">
+                        <div className="text-xl sm:text-2xl font-bold font-mono text-black dark:text-white tracking-tight">
                           {metric.value}
                         </div>
                         <div className="text-[8px] font-mono text-slate-500 uppercase mt-1 leading-normal tracking-wider">
@@ -270,7 +270,7 @@ export default function TeamSection() {
 
                   {/* Owned architecture modules list */}
                   <div className="space-y-3">
-                    <h5 className="text-[9px] font-mono font-bold text-slate-400 uppercase tracking-widest flex items-center gap-1.5">
+                    <h5 className="text-[9px] font-mono font-bold text-slate-600 dark:text-slate-400 uppercase tracking-widest flex items-center gap-1.5">
                       <Layers size={11} className="text-cyan-400" />
                       SYSTEM COMPONENT DIRECT OWNERSHIP
                     </h5>
@@ -279,7 +279,7 @@ export default function TeamSection() {
                       {activeDetails.ownedModules.map((mod) => (
                         <div 
                           key={mod}
-                          className="p-2.5 bg-slate-950/50 hover:bg-slate-950 border border-white/5 hover:border-cyan-500/25 rounded-lg flex items-center gap-2 text-slate-300 transition duration-150 font-sans"
+                          className="p-2.5 bg-slate-50 dark:bg-slate-950/50 hover:bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-white/5 hover:border-cyan-500/25 rounded-lg flex items-center gap-2 text-slate-700 dark:text-slate-300 transition duration-150 font-sans"
                         >
                           <CheckCircle className="text-cyan-400 flex-shrink-0" size={12} />
                           <span className="text-[11px] truncate">{mod}</span>
@@ -291,7 +291,7 @@ export default function TeamSection() {
                 </div>
 
                 {/* Footer details & socials */}
-                <div className="pt-6 mt-8 border-t border-white/5 flex justify-between items-center text-[10px] font-mono">
+                <div className="pt-6 mt-8 border-t border-slate-200 dark:border-white/5 flex justify-between items-center text-[10px] font-mono">
                   <span className="text-slate-500">INDIVIDUAL REPOSITORY SHA-256</span>
                   
                   <div className="flex gap-2">
@@ -299,7 +299,7 @@ export default function TeamSection() {
                       href={activeMember.github} 
                       target="_blank" 
                       rel="noreferrer"
-                      className="p-1.5 rounded-lg bg-slate-950 border border-white/5 hover:bg-slate-900 text-slate-500 hover:text-white transition cursor-pointer"
+                      className="p-1.5 rounded-lg bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-white/5 hover:bg-white dark:bg-slate-900 text-slate-500 hover:text-black dark:text-white transition cursor-pointer"
                     >
                       <Github size={12} />
                     </a>
@@ -307,7 +307,7 @@ export default function TeamSection() {
                       href={activeMember.linkedin} 
                       target="_blank" 
                       rel="noreferrer"
-                      className="p-1.5 rounded-lg bg-slate-950 border border-white/5 hover:bg-slate-900 text-slate-500 hover:text-white transition cursor-pointer"
+                      className="p-1.5 rounded-lg bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-white/5 hover:bg-white dark:bg-slate-900 text-slate-500 hover:text-black dark:text-white transition cursor-pointer"
                     >
                       <Linkedin size={12} />
                     </a>

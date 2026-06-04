@@ -16,7 +16,7 @@ export default function FutureScope() {
   };
 
   return (
-    <section id="roadmap" className="relative py-24 bg-navy-950/40 border-t border-white/5 overflow-hidden">
+    <section id="roadmap" className="relative py-24 bg-white dark:bg-navy-950/40 border-t border-slate-200 dark:border-white/5 overflow-hidden">
       
       {/* Background radial highlight */}
       <div className="absolute bottom-1/4 left-1/4 w-[350px] h-[350px] bg-blue-600/5 rounded-full blur-[100px] pointer-events-none"></div>
@@ -29,10 +29,10 @@ export default function FutureScope() {
             <Lightbulb size={12} className="animate-pulse" />
             FUTURE SCOPE
           </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-black dark:text-white tracking-tight">
             {FUTURE_SCOPE.title}
           </h2>
-          <p className="text-slate-400 text-sm md:text-base leading-relaxed font-sans max-w-xl mx-auto">
+          <p className="text-slate-600 dark:text-slate-400 text-sm md:text-base leading-relaxed font-sans max-w-xl mx-auto">
             {FUTURE_SCOPE.description}
           </p>
         </div>
@@ -47,14 +47,14 @@ export default function FutureScope() {
             {FUTURE_SCOPE.enhancements.map((enhancement, idx) => (
               <div 
                 key={idx}
-                className="p-4 rounded-xl bg-slate-900/60 border border-white/5 hover:border-cyan-500/20 hover:bg-slate-900 transition-all duration-300 flex items-center gap-3 text-left group"
+                className="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-white/5 hover:border-cyan-500/20 hover:bg-white dark:bg-slate-900 transition-all duration-300 flex items-center gap-3 text-left group"
               >
-                <div className="p-2 bg-slate-950 rounded-lg border border-white/10 group-hover:scale-105 transition-transform">
+                <div className="p-2 bg-slate-50 dark:bg-slate-950 rounded-lg border border-slate-300 dark:border-white/10 group-hover:scale-105 transition-transform">
                   {getEnhancementIcon(idx)}
                 </div>
                 <div>
                   <span className="text-[8px] font-mono text-slate-500 font-bold block leading-none mb-1">PHASE 0{idx + 1}</span>
-                  <span className="text-xs font-bold text-slate-200 group-hover:text-white transition-colors block">
+                  <span className="text-xs font-bold text-slate-800 dark:text-slate-200 group-hover:text-black dark:text-white transition-colors block">
                     {enhancement}
                   </span>
                 </div>
@@ -64,7 +64,7 @@ export default function FutureScope() {
         </div>
 
         {/* Long term vision bento box callout */}
-        <div className="p-8 rounded-3xl bg-slate-900/40 border border-white/5 relative overflow-hidden text-left max-w-4xl mx-auto backdrop-blur-md">
+        <div className="p-8 rounded-3xl bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-white/5 relative overflow-hidden text-left max-w-4xl mx-auto backdrop-blur-md">
           <div className="absolute top-0 right-0 w-48 h-48 bg-cyan-500/[0.03] rounded-full blur-3xl pointer-events-none"></div>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
@@ -74,31 +74,31 @@ export default function FutureScope() {
                 LONG-TERM PROJECT ROADMAP VISION
               </div>
               
-              <h4 className="text-xl md:text-2xl font-bold text-white tracking-tight leading-snug">
+              <h4 className="text-xl md:text-2xl font-bold text-black dark:text-white tracking-tight leading-snug">
                 Universal Indoor Navigation Framework
               </h4>
               
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
+              <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed font-sans">
                 {FUTURE_SCOPE.longTermVision}
               </p>
             </div>
 
             <div className="md:col-span-4 grid grid-cols-2 gap-3">
-              <div className="p-3 rounded-xl bg-black/40 border border-white/5 text-center flex flex-col justify-center items-center">
+              <div className="p-3 rounded-xl bg-black/40 border border-slate-200 dark:border-white/5 text-center flex flex-col justify-center items-center">
                 <HeartPulse size={16} className="text-cyan-400 mb-1" />
-                <span className="text-[9px] font-mono text-slate-300">Hospitals</span>
+                <span className="text-[9px] font-mono text-slate-700 dark:text-slate-300">Hospitals</span>
               </div>
-              <div className="p-3 rounded-xl bg-black/40 border border-white/5 text-center flex flex-col justify-center items-center">
+              <div className="p-3 rounded-xl bg-black/40 border border-slate-200 dark:border-white/5 text-center flex flex-col justify-center items-center">
                 <SpaceShipPlaceholder size={16} className="text-purple-400 mb-1" />
-                <span className="text-[9px] font-mono text-slate-300">Airports</span>
+                <span className="text-[9px] font-mono text-slate-700 dark:text-slate-300">Airports</span>
               </div>
-              <div className="p-3 rounded-xl bg-black/40 border border-white/5 text-center flex flex-col justify-center items-center">
+              <div className="p-3 rounded-xl bg-black/40 border border-slate-200 dark:border-white/5 text-center flex flex-col justify-center items-center">
                 <ShoppingBag size={16} className="text-emerald-400 mb-1" />
-                <span className="text-[9px] font-mono text-slate-300">Malls</span>
+                <span className="text-[9px] font-mono text-slate-700 dark:text-slate-300">Malls</span>
               </div>
-              <div className="p-3 rounded-xl bg-black/40 border border-white/5 text-center flex flex-col justify-center items-center">
+              <div className="p-3 rounded-xl bg-black/40 border border-slate-200 dark:border-white/5 text-center flex flex-col justify-center items-center">
                 <Landmark size={16} className="text-indigo-400 mb-1" />
-                <span className="text-[9px] font-mono text-slate-300">Museums</span>
+                <span className="text-[9px] font-mono text-slate-700 dark:text-slate-300">Museums</span>
               </div>
             </div>
           </div>
