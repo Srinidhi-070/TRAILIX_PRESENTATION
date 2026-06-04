@@ -62,12 +62,12 @@ export default function App() {
   }, [autoScroll]);
 
   return (
-    <div id="trailix-root" className="min-h-screen bg-slate-50 text-slate-900 dark:bg-navy-950 dark:text-slate-100 font-sans selection:bg-cyan-500/30 selection:text-white antialiased transition-colors duration-300">
+    <div id="trailix-root" className="min-h-screen bg-white text-black dark:bg-navy-950 dark:text-slate-100 font-sans selection:bg-cyan-500/30 selection:text-white antialiased transition-colors duration-300">
       
       {/* Decorative global ambient static nodes behind */}
-      <div className="fixed inset-0 pointer-events-none z-0">
-        <div className="absolute top-[15%] left-[10%] w-[450px] h-[450px] bg-blue-500/10 dark:bg-electric/5 rounded-full blur-[140px]"></div>
-        <div className="absolute bottom-[20%] right-[10%] w-[500px] h-[500px] bg-cyan-500/10 dark:bg-cyan/5 rounded-full blur-[150px]"></div>
+      <div className="fixed inset-0 pointer-events-none z-0 hidden dark:block">
+        <div className="absolute top-[15%] left-[10%] w-[450px] h-[450px] bg-electric/5 rounded-full blur-[140px]"></div>
+        <div className="absolute bottom-[20%] right-[10%] w-[500px] h-[500px] bg-cyan/5 rounded-full blur-[150px]"></div>
       </div>
 
       {/* Persistent global Navigation bar */}
