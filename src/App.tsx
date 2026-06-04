@@ -29,35 +29,36 @@ export default function App() {
     console.log("%cM. S. Ramaiah Institute of Technology - Department of AI & DS", "color: #0A5CC4;");
   }, []);
 
-  // Auto-scroll logic for presentation mode
+  // Continuous animated auto-scroll logic
   useEffect(() => {
-    let interval: NodeJS.Timeout;
+    let animationFrameId: number;
     
+    const smoothScroll = () => {
+      // Scroll by 1.5 pixels per frame (~90px per second)
+      window.scrollBy({ top: 1.5, left: 0 });
+      
+      // Check if we hit the bottom of the page
+      if (Math.ceil(window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight) {
+        // Loop back to the top instantly
+        window.scrollTo({ top: 0, behavior: 'auto' });
+      }
+      
+      animationFrameId = requestAnimationFrame(smoothScroll);
+    };
+
     if (autoScroll) {
-      interval = setInterval(() => {
-        const sections = Array.from(document.querySelectorAll('section, footer')) as HTMLElement[];
-        const scrollPosition = window.scrollY;
-        
-        let targetSection = null;
-        for (let i = 0; i < sections.length; i++) {
-          const sectionTop = sections[i].offsetTop;
-          if (sectionTop > scrollPosition + 10) { // Buffer to handle sub-pixel positions
-            targetSection = sections[i];
-            break;
-          }
-        }
-        
-        if (targetSection) {
-          targetSection.scrollIntoView({ behavior: 'smooth' });
-        } else {
-          // Reached the end (footer). Stop the auto-scroll and reset to top.
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-          setAutoScroll(false);
-        }
-      }, 5000); // Navigate to next section every 5 seconds
+      // Temporarily disable scroll snapping so it doesn't fight the continuous animation
+      document.documentElement.style.scrollSnapType = 'none';
+      animationFrameId = requestAnimationFrame(smoothScroll);
+    } else {
+      // Restore native scroll snapping
+      document.documentElement.style.scrollSnapType = '';
     }
     
-    return () => clearInterval(interval);
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+      document.documentElement.style.scrollSnapType = '';
+    };
   }, [autoScroll]);
 
   return (
