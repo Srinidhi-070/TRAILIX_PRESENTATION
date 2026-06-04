@@ -37,7 +37,10 @@ export default function Hero() {
     };
 
     const handleEnded = () => {
-      setIsPlaying(false);
+      const nextIdx = (currentDemoIdx + 1) % demos.length;
+      setCurrentDemoIdx(nextIdx);
+      setVideoSrc(demos[nextIdx]);
+      setIsPlaying(true);
     };
 
     video.addEventListener('timeupdate', handleTimeUpdate);
@@ -49,7 +52,7 @@ export default function Hero() {
       video.removeEventListener('durationchange', handleDurationChange);
       video.removeEventListener('ended', handleEnded);
     };
-  }, [videoSrc]);
+  }, [videoSrc, currentDemoIdx]);
 
   const loadVideoFile = (file: File) => {
     if (file.type.startsWith('video/')) {
@@ -253,7 +256,6 @@ export default function Hero() {
                     muted={isMuted}
                     playsInline
                     autoPlay
-                    loop
                     className="w-full h-full object-contain rounded-[36px] bg-black"
                   />
                   
