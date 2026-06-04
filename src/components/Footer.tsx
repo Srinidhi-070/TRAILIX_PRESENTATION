@@ -14,8 +14,8 @@ export default function Footer() {
           {/* Col 1: Branding block */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-lg shadow-cyan-950/20 overflow-hidden">
-                <img src="/logo.png" alt="Trailix Logo" className="w-full h-full object-cover p-0.5" />
+              <div className="w-8 h-8 rounded-lg flex items-center justify-center shadow-lg shadow-cyan-950/20 overflow-hidden">
+                <img src="/logo.png" alt="Trailix Logo" className="w-full h-full object-cover" />
               </div>
               <div className="flex flex-col text-left">
                 <span className="text-sm font-bold text-white tracking-widest leading-none">TRAILIX</span>

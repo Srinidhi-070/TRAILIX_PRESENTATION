@@ -33,8 +33,8 @@ export default function Header() {
         
         {/* LOGO */}
         <a href="#" className="flex items-center gap-3 group">
-          <div className="relative w-10 h-10 rounded-xl overflow-hidden bg-white flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:scale-105 transition duration-300">
-            <img src="/logo.png" alt="Trailix Logo" className="w-full h-full object-cover p-1" />
+          <div className="relative w-10 h-10 rounded-xl overflow-hidden flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:scale-105 transition duration-300">
+            <img src="/logo.png" alt="Trailix Logo" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-cyan-400/5 opacity-0 group-hover:opacity-100 transition duration-300"></div>
           </div>
           <div className="flex flex-col text-left">
