@@ -56,28 +56,7 @@ export default function Footer() {
                 <span className="text-[9px] font-mono text-cyan-400 block tracking-wider leading-none uppercase">PROJECT GUIDE</span>
                 <strong className="text-slate-800 dark:text-slate-200 block text-xs mt-0.5">Dr. Vaneeta M</strong>
               </div>
-              <div className="flex gap-3 pt-2">
-                <a 
-                  href="#"
-                  className="p-1.5 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5 hover:text-black dark:hover:text-white transition cursor-pointer"
-                >
-                  <Mail size={12} />
-                </a>
-                <a 
-                  href="https://github.com/trailix" 
-                  target="_blank"
-                  rel="noreferrer"
-                  className="p-1.5 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5 hover:text-black dark:hover:text-white transition cursor-pointer"
-                >
-                  <Github size={12} />
-                </a>
-                <a 
-                  href="#"
-                  className="p-1.5 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5 hover:text-black dark:hover:text-white transition cursor-pointer"
-                >
-                  <Linkedin size={12} />
-                </a>
-              </div>
+
             </div>
           </div>
 
