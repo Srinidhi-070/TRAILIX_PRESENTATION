@@ -31,7 +31,7 @@ export default function AboutProject() {
           
             {/* Right Visual Highlight Block */}
           <div className="lg:col-span-6 relative">
-            <div className="p-8 rounded-3xl bg-slate-50 dark:bg-gradient-to-br dark:from-blue-950/30 dark:to-slate-900/30 border border-slate-300 dark:border-white/10 relative overflow-hidden backdrop-blur-md">
+            <div className="p-8 rounded-3xl bg-slate-50 dark:bg-slate-900/40 border border-slate-300 dark:border-white/10 relative overflow-hidden backdrop-blur-md">
               <div className="absolute -right-16 -top-16 w-48 h-48 bg-cyan-500/10 dark:bg-cyan-400/15 rounded-full blur-3xl pointer-events-none"></div>
               
               <h3 className="text-xl font-bold text-black dark:text-white mb-6 text-left flex items-center gap-2">
