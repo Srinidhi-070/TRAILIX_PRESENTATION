@@ -176,7 +176,7 @@ export default function TeamSection() {
                     </div>
 
                     <div className="space-y-1">
-                      <h4 className="text-md font-bold text-black dark:text-slate-100 group-hover:text-black dark:hover:text-white transition leading-snug">
+                      <h4 className="text-md font-bold text-black dark:text-slate-100 group-hover:text-black dark:group-hover:text-white transition leading-snug">
                         {member.name}
                       </h4>
                       <p className="text-xs font-mono text-cyan-400 font-bold tracking-wide">

@@ -307,7 +307,7 @@ export default function Architecture() {
                     <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 -translate-x-full group-hover:translate-x-full transition-all duration-1000 ease-in-out pointer-events-none"></div>
 
                     <div className="flex items-center gap-4 relative z-10">
-                      <div className="text-[11px] font-mono font-bold text-cyan-400 bg-cyan-50 dark:bg-cyan-950/70 px-2.5 py-1.5 rounded border border-cyan-900 w-9 flex justify-center shrink-0 group-hover:bg-cyan-500 group-hover:text-black dark:hover:text-white transition-colors">
+                      <div className="text-[11px] font-mono font-bold text-cyan-400 bg-cyan-50 dark:bg-cyan-950/70 px-2.5 py-1.5 rounded border border-cyan-900 w-9 flex justify-center shrink-0 group-hover:bg-cyan-500 group-hover:text-black dark:group-hover:text-white transition-colors">
                         {step.id}
                       </div>
                       <div>
@@ -315,7 +315,7 @@ export default function Architecture() {
                           {step.actor}
                           <ArrowRight size={10} className="text-slate-600 group-hover:text-cyan-400 transition-colors" />
                         </div>
-                        <div className="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover:text-black dark:hover:text-white transition-colors">{step.action}</div>
+                        <div className="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover:text-black dark:group-hover:text-white transition-colors">{step.action}</div>
                       </div>
                     </div>
                     

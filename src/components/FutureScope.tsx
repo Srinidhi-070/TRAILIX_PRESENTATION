@@ -54,7 +54,7 @@ export default function FutureScope() {
                 </div>
                 <div>
                   <span className="text-[8px] font-mono text-slate-500 font-bold block leading-none mb-1">PHASE 0{idx + 1}</span>
-                  <span className="text-xs font-bold text-slate-800 dark:text-slate-200 group-hover:text-black dark:hover:text-white transition-colors block">
+                  <span className="text-xs font-bold text-slate-800 dark:text-slate-200 group-hover:text-black dark:group-hover:text-white transition-colors block">
                     {enhancement}
                   </span>
                 </div>

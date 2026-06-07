@@ -74,7 +74,7 @@ export default function PerformanceMetrics() {
                     </div>
                     <div>
                       <span className="text-[8px] font-mono font-bold text-slate-500 tracking-wider block">TELEMETRY</span>
-                      <h4 className="text-xs font-bold text-slate-700 dark:text-slate-300 group-hover:text-black dark:hover:text-white leading-tight">
+                      <h4 className="text-xs font-bold text-slate-700 dark:text-slate-300 group-hover:text-black dark:group-hover:text-white leading-tight">
                         {metric.label}
                       </h4>
                     </div>
