@@ -105,7 +105,7 @@ export default function ProblemStatement() {
                 </div>
 
                 {/* Heavy concrete block */}
-                <div className="absolute top-[45%] left-1/2 -translate-x-1/2 w-44 p-2 bg-white dark:bg-slate-900 border border-slate-700/60 rounded-lg text-center shadow-lg">
+                <div className="absolute top-[45%] left-1/2 -translate-x-1/2 w-44 p-2 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700/60 rounded-lg text-center shadow-lg">
                   <Building2 size={16} className="text-slate-600 dark:text-slate-400 mx-auto mb-1 animate-pulse" />
                   <div className="text-[9px] font-mono font-medium text-slate-800 dark:text-slate-200">MSRIT Apex Block Roof</div>
                   <div className="text-[7px] font-mono text-rose-400 uppercase mt-0.5 tracking-wider">Attenuation: -45dB</div>
@@ -160,7 +160,7 @@ export default function ProblemStatement() {
                 </div>
               </div>
 
-              <div className="pt-4 mt-4 border-t border-slate-950 text-[11px] text-slate-500 italic leading-relaxed">
+              <div className="pt-4 mt-4 border-t border-slate-200 dark:border-slate-950 text-[11px] text-slate-500 italic leading-relaxed">
                 {stat.change}
               </div>
             </div>

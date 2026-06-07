@@ -66,8 +66,8 @@ export default function SystemWorkflow() {
                       onClick={() => setActiveStep(idx)}
                       className={`group p-4 rounded-xl border text-left cursor-pointer transition-all duration-300 relative ${
                         isActive 
-                          ? 'bg-gradient-to-r from-cyan-950/40 to-slate-900 border-cyan-500/40 shadow-[0_0_20px_rgba(6,182,212,0.05)]' 
-                          : 'bg-white dark:bg-slate-900/40 border-slate-200 dark:border-white/5 hover:border-slate-700/80'
+                          ? 'bg-gradient-to-r from-cyan-50 to-slate-100 dark:from-cyan-950/40 dark:to-slate-900 border-cyan-400/50 dark:border-cyan-500/40 shadow-[0_0_20px_rgba(6,182,212,0.15)] dark:shadow-[0_0_20px_rgba(6,182,212,0.05)]' 
+                          : 'bg-white dark:bg-slate-900/40 border-slate-200 dark:border-white/5 hover:border-slate-300 dark:hover:border-slate-700/80'
                       }`}
                     >
                       {/* Active green edge line */}

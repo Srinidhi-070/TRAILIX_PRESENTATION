@@ -197,7 +197,7 @@ export default function Hero() {
             {/* Title / Name from sleek theme */}
             <div className="space-y-3">
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.1] tracking-tight uppercase">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-slate-500">TRAILIX Core</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-slate-800 to-slate-500 dark:from-white dark:via-white dark:to-slate-500">TRAILIX Core</span>
                 <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400">AR Spatial Navigation</span>
               </h1>
