@@ -54,11 +54,11 @@ export default function ResultsGallery() {
     }
 
     return (
-      <div className={`relative w-full ${isLarge ? 'h-[360px]' : 'h-[250px]'} rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-white/5 overflow-hidden flex flex-col justify-center items-center`}>
+      <div className={`relative w-full ${isLarge ? 'h-[450px]' : 'h-[320px]'} rounded-xl bg-slate-100 dark:bg-slate-950/50 border border-slate-200 dark:border-white/5 overflow-hidden flex flex-col justify-center items-center`}>
          <img 
            src={imageSrc} 
            alt={`${id} Demo`} 
-           className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+           className="w-full h-full object-contain p-4 opacity-90 hover:opacity-100 transition-opacity drop-shadow-2xl"
          />
       </div>
     );
