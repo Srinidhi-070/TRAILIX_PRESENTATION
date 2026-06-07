@@ -5,8 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-white/5 py-16 relative overflow-hidden bg-dots">
       
-      {/* Decorative vertical pathway line */}
-      <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[1px] bg-gradient-to-b from-slate-900 via-transparent to-transparent pointer-events-none"></div>
+
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10 text-left">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-12 border-b border-slate-200 dark:border-white/5">

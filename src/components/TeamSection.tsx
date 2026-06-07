@@ -149,7 +149,7 @@ export default function TeamSection() {
                   onClick={() => setSelectedMember(member.name)}
                   className={`p-6 rounded-2xl cursor-pointer border text-left flex flex-col justify-between transition-all duration-300 relative group ${
                     isSelected 
-                      ? 'bg-gradient-to-br from-cyan-50 to-slate-100 dark:from-cyan-950/45 dark:to-slate-900 border-cyan-400/50 dark:border-cyan-500/40 shadow-[0_0_24px_rgba(6,182,212,0.15)] dark:shadow-[0_0_24px_rgba(6,182,212,0.08)] scale-[1.01]' 
+                      ? 'bg-slate-50 dark:bg-slate-900 border-cyan-400/50 dark:border-cyan-500/40 shadow-[0_0_24px_rgba(6,182,212,0.15)] dark:shadow-[0_0_24px_rgba(6,182,212,0.08)] scale-[1.01]' 
                       : 'bg-white dark:bg-slate-900/50 border-slate-200 dark:border-white/5 hover:border-slate-300 dark:hover:border-slate-700/80'
                   }`}
                 >
