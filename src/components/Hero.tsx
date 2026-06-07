@@ -214,10 +214,10 @@ export default function Hero() {
             {/* Team indicator from sleek design */}
             <div className="flex gap-4 pt-2">
               <div className="flex -space-x-3">
-                <span className="w-10 h-10 rounded-full border-2 border-[#020617] bg-[#1e293b] flex items-center justify-center text-[10px] font-bold">SN</span>
-                <span className="w-10 h-10 rounded-full border-2 border-[#020617] bg-[#1e293b] flex items-center justify-center text-[10px] font-bold">RP</span>
-                <span className="w-10 h-10 rounded-full border-2 border-[#020617] bg-[#1e293b] flex items-center justify-center text-[10px] font-bold">RC</span>
-                <span className="w-10 h-10 rounded-full border-2 border-[#020617] bg-[#1e293b] flex items-center justify-center text-[10px] font-bold">MN</span>
+                <span className="w-10 h-10 rounded-full border-2 border-white dark:border-[#020617] bg-slate-100 dark:bg-[#1e293b] text-slate-600 dark:text-white flex items-center justify-center text-[10px] font-bold">SN</span>
+                <span className="w-10 h-10 rounded-full border-2 border-white dark:border-[#020617] bg-slate-100 dark:bg-[#1e293b] text-slate-600 dark:text-white flex items-center justify-center text-[10px] font-bold">RP</span>
+                <span className="w-10 h-10 rounded-full border-2 border-white dark:border-[#020617] bg-slate-100 dark:bg-[#1e293b] text-slate-600 dark:text-white flex items-center justify-center text-[10px] font-bold">RC</span>
+                <span className="w-10 h-10 rounded-full border-2 border-white dark:border-[#020617] bg-slate-100 dark:bg-[#1e293b] text-slate-600 dark:text-white flex items-center justify-center text-[10px] font-bold">MN</span>
               </div>
               <div className="text-sm flex flex-col justify-center">
                 <span className="text-slate-800 dark:text-slate-200 font-bold leading-none">Engineering Team</span>
