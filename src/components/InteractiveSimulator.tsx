@@ -373,7 +373,7 @@ export default function InteractiveSimulator() {
                           setScannedLocation('Manual Entry Block - Lobby');
                           setCurrentStep('search');
                         }}
-                        className="w-full py-1.5 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-800 hover:bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-mono rounded-lg transition"
+                        className="w-full py-1.5 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-mono rounded-lg transition"
                       >
                         Bypass Scan (Manual Entry)
                       </button>
@@ -443,7 +443,7 @@ export default function InteractiveSimulator() {
                         <div 
                           key={loc.id}
                           onClick={() => handleSelectLocation(loc)}
-                          className="p-2 rounded-lg bg-white dark:bg-slate-900/60 border border-slate-300 dark:border-slate-800 hover:border-cyan-500/20 hover:bg-white dark:bg-slate-900 text-left cursor-pointer transition flex items-center justify-between"
+                          className="p-2 rounded-lg bg-white dark:bg-slate-900/60 border border-slate-300 dark:border-slate-800 hover:border-cyan-500/20 hover:bg-white dark:hover:bg-slate-900 text-left cursor-pointer transition flex items-center justify-between"
                         >
                           <div>
                             <div className="text-[10px] font-medium text-slate-800 dark:text-slate-200">{loc.name}</div>
@@ -552,7 +552,7 @@ export default function InteractiveSimulator() {
                     <div className="mt-3 flex gap-2">
                       <button
                         onClick={() => setCurrentStep('search')}
-                        className="py-1.5 px-2 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-600 dark:text-slate-400 text-[10px] rounded-lg hover:bg-slate-100 dark:bg-slate-800 transition"
+                        className="py-1.5 px-2 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-600 dark:text-slate-400 text-[10px] rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition"
                       >
                         Back
                       </button>

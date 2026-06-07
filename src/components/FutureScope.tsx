@@ -47,14 +47,14 @@ export default function FutureScope() {
             {FUTURE_SCOPE.enhancements.map((enhancement, idx) => (
               <div 
                 key={idx}
-                className="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-white/5 hover:border-cyan-500/20 hover:bg-white dark:bg-slate-900 transition-all duration-300 flex items-center gap-3 text-left group"
+                className="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-white/5 hover:border-cyan-500/20 hover:bg-white dark:hover:bg-slate-900 transition-all duration-300 flex items-center gap-3 text-left group"
               >
                 <div className="p-2 bg-slate-50 dark:bg-slate-950 rounded-lg border border-slate-300 dark:border-white/10 group-hover:scale-105 transition-transform">
                   {getEnhancementIcon(idx)}
                 </div>
                 <div>
                   <span className="text-[8px] font-mono text-slate-500 font-bold block leading-none mb-1">PHASE 0{idx + 1}</span>
-                  <span className="text-xs font-bold text-slate-800 dark:text-slate-200 group-hover:text-black dark:text-white transition-colors block">
+                  <span className="text-xs font-bold text-slate-800 dark:text-slate-200 group-hover:text-black dark:hover:text-white transition-colors block">
                     {enhancement}
                   </span>
                 </div>

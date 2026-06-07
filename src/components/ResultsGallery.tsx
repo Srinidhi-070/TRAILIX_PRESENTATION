@@ -128,13 +128,13 @@ export default function ResultsGallery() {
                 <div className="flex gap-2">
                   <button
                     onClick={handlePrev}
-                    className="p-1.5 bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 hover:border-slate-700/80 hover:bg-white dark:bg-slate-900 rounded-lg text-slate-600 dark:text-slate-400 hover:text-black dark:text-white transition cursor-pointer"
+                    className="p-1.5 bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 hover:border-slate-700/80 hover:bg-white dark:hover:bg-slate-900 rounded-lg text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white transition cursor-pointer"
                   >
                     <ChevronLeft size={16} />
                   </button>
                   <button
                     onClick={handleNext}
-                    className="p-1.5 bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 hover:border-slate-700/80 hover:bg-white dark:bg-slate-900 rounded-lg text-slate-600 dark:text-slate-400 hover:text-black dark:text-white transition cursor-pointer"
+                    className="p-1.5 bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 hover:border-slate-700/80 hover:bg-white dark:hover:bg-slate-900 rounded-lg text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white transition cursor-pointer"
                   >
                     <ChevronRight size={16} />
                   </button>
@@ -193,7 +193,7 @@ export default function ResultsGallery() {
               {/* Reset close absolute top-right */}
               <button
                 onClick={() => setModalOpen(false)}
-                className="absolute top-4 right-4 p-1.5 rounded-lg bg-slate-50 dark:bg-slate-950 hover:bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-black dark:text-white border border-slate-850 transition cursor-pointer"
+                className="absolute top-4 right-4 p-1.5 rounded-lg bg-slate-50 dark:bg-slate-950 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 hover:text-black dark:hover:text-white border border-slate-850 transition cursor-pointer"
               >
                 <X size={16} />
               </button>
@@ -250,7 +250,7 @@ export default function ResultsGallery() {
                 <div className="flex justify-end pt-4 border-t border-slate-200 dark:border-white/5">
                   <button
                     onClick={() => setModalOpen(false)}
-                    className="py-1.5 px-4 bg-slate-50 dark:bg-slate-950 hover:bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-800 rounded-lg text-xs font-mono font-bold text-slate-600 dark:text-slate-400 hover:text-black dark:text-white transition cursor-pointer"
+                    className="py-1.5 px-4 bg-slate-50 dark:bg-slate-950 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-300 dark:border-slate-800 rounded-lg text-xs font-mono font-bold text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white transition cursor-pointer"
                   >
                     Close spec sheet
                   </button>

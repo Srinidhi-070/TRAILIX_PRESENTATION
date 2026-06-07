@@ -60,7 +60,7 @@ export default function Footer() {
               <div className="flex gap-3 pt-2">
                 <a 
                   href="#"
-                  className="p-1.5 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5 hover:text-black dark:text-white transition cursor-pointer"
+                  className="p-1.5 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5 hover:text-black dark:hover:text-white transition cursor-pointer"
                 >
                   <Mail size={12} />
                 </a>
@@ -68,13 +68,13 @@ export default function Footer() {
                   href="https://github.com/trailix" 
                   target="_blank"
                   rel="noreferrer"
-                  className="p-1.5 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5 hover:text-black dark:text-white transition cursor-pointer"
+                  className="p-1.5 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5 hover:text-black dark:hover:text-white transition cursor-pointer"
                 >
                   <Github size={12} />
                 </a>
                 <a 
                   href="#"
-                  className="p-1.5 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5 hover:text-black dark:text-white transition cursor-pointer"
+                  className="p-1.5 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5 hover:text-black dark:hover:text-white transition cursor-pointer"
                 >
                   <Linkedin size={12} />
                 </a>

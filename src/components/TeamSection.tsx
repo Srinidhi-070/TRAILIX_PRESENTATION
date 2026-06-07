@@ -176,7 +176,7 @@ export default function TeamSection() {
                     </div>
 
                     <div className="space-y-1">
-                      <h4 className="text-md font-bold text-black dark:text-slate-100 group-hover:text-black dark:text-white transition leading-snug">
+                      <h4 className="text-md font-bold text-black dark:text-slate-100 group-hover:text-black dark:hover:text-white transition leading-snug">
                         {member.name}
                       </h4>
                       <p className="text-xs font-mono text-cyan-400 font-bold tracking-wide">
@@ -279,7 +279,7 @@ export default function TeamSection() {
                       {activeDetails.ownedModules.map((mod) => (
                         <div 
                           key={mod}
-                          className="p-2.5 bg-slate-50 dark:bg-slate-950/50 hover:bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-white/5 hover:border-cyan-500/25 rounded-lg flex items-center gap-2 text-slate-700 dark:text-slate-300 transition duration-150 font-sans"
+                          className="p-2.5 bg-slate-50 dark:bg-slate-950/50 hover:bg-slate-50 dark:hover:bg-slate-950 border border-slate-200 dark:border-white/5 hover:border-cyan-500/25 rounded-lg flex items-center gap-2 text-slate-700 dark:text-slate-300 transition duration-150 font-sans"
                         >
                           <CheckCircle className="text-cyan-400 flex-shrink-0" size={12} />
                           <span className="text-[11px] truncate">{mod}</span>
@@ -299,7 +299,7 @@ export default function TeamSection() {
                       href={activeMember.github} 
                       target="_blank" 
                       rel="noreferrer"
-                      className="p-1.5 rounded-lg bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-white/5 hover:bg-white dark:bg-slate-900 text-slate-500 hover:text-black dark:text-white transition cursor-pointer"
+                      className="p-1.5 rounded-lg bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-white/5 hover:bg-white dark:hover:bg-slate-900 text-slate-500 hover:text-black dark:hover:text-white transition cursor-pointer"
                     >
                       <Github size={12} />
                     </a>
@@ -307,7 +307,7 @@ export default function TeamSection() {
                       href={activeMember.linkedin} 
                       target="_blank" 
                       rel="noreferrer"
-                      className="p-1.5 rounded-lg bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-white/5 hover:bg-white dark:bg-slate-900 text-slate-500 hover:text-black dark:text-white transition cursor-pointer"
+                      className="p-1.5 rounded-lg bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-white/5 hover:bg-white dark:hover:bg-slate-900 text-slate-500 hover:text-black dark:hover:text-white transition cursor-pointer"
                     >
                       <Linkedin size={12} />
                     </a>

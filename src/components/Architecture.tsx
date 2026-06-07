@@ -221,7 +221,7 @@ export default function Architecture() {
                 </p>
                 <button 
                   onClick={() => setSelectedNode(null)}
-                  className="mt-3 text-[10px] font-mono text-slate-600 dark:text-slate-400 hover:text-black dark:text-white transition-colors underline"
+                  className="mt-3 text-[10px] font-mono text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white transition-colors underline"
                 >
                   Close Inspector
                 </button>
@@ -301,13 +301,13 @@ export default function Architecture() {
                     className="absolute left-[14px] top-1/2 -translate-y-1/2 w-3.5 h-3.5 rounded-full bg-slate-50 dark:bg-slate-950 border-2 border-cyan-500 group-hover:bg-cyan-400 group-hover:scale-125 transition-all duration-300 shadow-[0_0_10px_rgba(6,182,212,0.5)] z-10"
                   />
                   
-                  <div className="p-4 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-white/5 group-hover:border-cyan-500/30 group-hover:bg-slate-100 dark:bg-slate-800/80 transition-all duration-300 backdrop-blur-md flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-lg group-hover:shadow-[0_0_20px_rgba(6,182,212,0.1)] overflow-hidden relative">
+                  <div className="p-4 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-white/5 group-hover:border-cyan-500/30 group-hover:bg-slate-100 dark:hover:bg-slate-800/80 transition-all duration-300 backdrop-blur-md flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-lg group-hover:shadow-[0_0_20px_rgba(6,182,212,0.1)] overflow-hidden relative">
                     
                     {/* Hover glow effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 -translate-x-full group-hover:translate-x-full transition-all duration-1000 ease-in-out pointer-events-none"></div>
 
                     <div className="flex items-center gap-4 relative z-10">
-                      <div className="text-[11px] font-mono font-bold text-cyan-400 bg-cyan-50 dark:bg-cyan-950/70 px-2.5 py-1.5 rounded border border-cyan-900 w-9 flex justify-center shrink-0 group-hover:bg-cyan-500 group-hover:text-black dark:text-white transition-colors">
+                      <div className="text-[11px] font-mono font-bold text-cyan-400 bg-cyan-50 dark:bg-cyan-950/70 px-2.5 py-1.5 rounded border border-cyan-900 w-9 flex justify-center shrink-0 group-hover:bg-cyan-500 group-hover:text-black dark:hover:text-white transition-colors">
                         {step.id}
                       </div>
                       <div>
@@ -315,7 +315,7 @@ export default function Architecture() {
                           {step.actor}
                           <ArrowRight size={10} className="text-slate-600 group-hover:text-cyan-400 transition-colors" />
                         </div>
-                        <div className="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover:text-black dark:text-white transition-colors">{step.action}</div>
+                        <div className="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover:text-black dark:hover:text-white transition-colors">{step.action}</div>
                       </div>
                     </div>
                     

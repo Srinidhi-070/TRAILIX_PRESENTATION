@@ -90,7 +90,7 @@ export default function SystemWorkflow() {
 
                           <div>
                             <span className="text-[8px] font-mono font-bold text-slate-500 leading-none">PHASE {step.id}</span>
-                            <h4 className="text-sm font-semibold text-slate-800 dark:text-slate-200 mt-1 leading-none group-hover:text-black dark:text-white transition">
+                            <h4 className="text-sm font-semibold text-slate-800 dark:text-slate-200 mt-1 leading-none group-hover:text-black dark:hover:text-white transition">
                               {step.title}
                             </h4>
                           </div>
@@ -121,7 +121,7 @@ export default function SystemWorkflow() {
                 <button
                   disabled={activeStep === 0}
                   onClick={() => setActiveStep(prev => Math.max(0, prev - 1))}
-                  className="px-3 py-1 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-white/5 hover:border-slate-700 hover:bg-white dark:bg-slate-900 rounded-lg text-xs font-mono text-slate-700 dark:text-slate-300 disabled:opacity-40 transition-all leading-tight cursor-pointer"
+                  className="px-3 py-1 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-white/5 hover:border-slate-700 hover:bg-white dark:hover:bg-slate-900 rounded-lg text-xs font-mono text-slate-700 dark:text-slate-300 disabled:opacity-40 transition-all leading-tight cursor-pointer"
                 >
                   PREV
                 </button>

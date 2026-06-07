@@ -63,7 +63,7 @@ export default function PerformanceMetrics() {
             return (
               <div 
                 key={metric.id}
-                className="p-6 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-white/5 hover:border-cyan-500/30 hover:bg-white dark:bg-slate-900 transition-all duration-300 text-left flex flex-col justify-between group h-[240px] relative overflow-hidden"
+                className="p-6 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-white/5 hover:border-cyan-500/30 hover:bg-white dark:hover:bg-slate-900 transition-all duration-300 text-left flex flex-col justify-between group h-[240px] relative overflow-hidden"
               >
                 
                 {/* Upper line metadata */}
@@ -74,7 +74,7 @@ export default function PerformanceMetrics() {
                     </div>
                     <div>
                       <span className="text-[8px] font-mono font-bold text-slate-500 tracking-wider block">TELEMETRY</span>
-                      <h4 className="text-xs font-bold text-slate-700 dark:text-slate-300 group-hover:text-black dark:text-white leading-tight">
+                      <h4 className="text-xs font-bold text-slate-700 dark:text-slate-300 group-hover:text-black dark:hover:text-white leading-tight">
                         {metric.label}
                       </h4>
                     </div>

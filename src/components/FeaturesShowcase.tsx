@@ -52,7 +52,7 @@ export default function FeaturesShowcase() {
           {KEY_ACHIEVEMENTS.achievements.map((achievement, idx) => (
             <div 
               key={idx}
-              className="p-6 rounded-2xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-white/5 hover:border-cyan-500/30 hover:bg-white dark:bg-slate-900 transition-all duration-300 text-left flex flex-col justify-between group"
+              className="p-6 rounded-2xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-white/5 hover:border-cyan-500/30 hover:bg-white dark:hover:bg-slate-900 transition-all duration-300 text-left flex flex-col justify-between group"
             >
               <div className="space-y-5">
                 <div className="flex justify-between items-start">
@@ -65,7 +65,7 @@ export default function FeaturesShowcase() {
                 </div>
 
                 <div className="space-y-1.5">
-                  <h4 className="text-base font-bold text-slate-800 dark:text-slate-200 group-hover:text-black dark:text-white transition">
+                  <h4 className="text-base font-bold text-slate-800 dark:text-slate-200 group-hover:text-black dark:hover:text-white transition">
                     {achievement.title}
                   </h4>
                   <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-sans min-h-[48px]">

@@ -294,7 +294,7 @@ export default function Hero() {
                     <div className="flex items-center justify-between">
                       <button 
                         onClick={togglePlay}
-                        className="p-1 text-slate-700 dark:text-slate-300 hover:text-black dark:text-white transition cursor-pointer"
+                        className="p-1 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white transition cursor-pointer"
                       >
                         {isPlaying ? <Pause size={13} className="fill-slate-300" /> : <Play size={13} className="fill-slate-300" />}
                       </button>
@@ -306,7 +306,7 @@ export default function Hero() {
                       <div className="flex items-center gap-1.5">
                         <button 
                           onClick={() => setIsMuted(!isMuted)}
-                          className="p-1 text-slate-700 dark:text-slate-300 hover:text-black dark:text-white transition cursor-pointer"
+                          className="p-1 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white transition cursor-pointer"
                         >
                           {isMuted ? <VolumeX size={13} /> : <Volume2 size={13} />}
                         </button>

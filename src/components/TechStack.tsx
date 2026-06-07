@@ -50,7 +50,7 @@ export default function TechStack() {
               className={`px-4 py-2 rounded-xl text-xs font-mono font-bold uppercase transition-all duration-200 inline-flex items-center gap-2 border cursor-pointer ${
                 activeTab === tab.id 
                   ? 'bg-cyan-500/10 border-cyan-500/40 text-cyan-400 shadow-lg shadow-cyan-950/45' 
-                  : 'bg-transparent border-slate-300 dark:border-slate-800/80 text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:text-slate-200 hover:border-slate-700'
+                  : 'bg-transparent border-slate-300 dark:border-slate-800/80 text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 hover:border-slate-700'
               }`}
             >
               {tab.icon}

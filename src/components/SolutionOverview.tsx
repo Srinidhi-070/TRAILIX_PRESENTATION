@@ -47,11 +47,11 @@ export default function SolutionOverview() {
           {OUR_SOLUTION.features.map((feature) => (
             <div 
               key={feature.id}
-              className="p-6 rounded-2xl bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-white/5 hover:border-cyan-500/30 hover:bg-white dark:bg-slate-900/80 hover:shadow-[0_0_40px_rgba(6,182,212,0.1)] transition-all duration-300 text-left flex flex-col justify-between group"
+              className="p-6 rounded-2xl bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-white/5 hover:border-cyan-500/30 hover:bg-white dark:hover:bg-slate-900/80 hover:shadow-[0_0_40px_rgba(6,182,212,0.1)] transition-all duration-300 text-left flex flex-col justify-between group"
             >
               <div className="space-y-6">
                 {/* Icon wrapper */}
-                <div className="w-11 h-11 ml-0 rounded-xl bg-slate-50 dark:bg-slate-950 flex items-center justify-center border border-slate-300 dark:border-white/10 group-hover:border-slate-700/80 group-hover:bg-white dark:bg-slate-900/60 shadow-lg shadow-black/40 transition duration-300">
+                <div className="w-11 h-11 ml-0 rounded-xl bg-slate-50 dark:bg-slate-950 flex items-center justify-center border border-slate-300 dark:border-white/10 group-hover:border-slate-700/80 group-hover:bg-white dark:hover:bg-slate-900/60 shadow-lg shadow-black/40 transition duration-300">
                   {getIcon(feature.icon)}
                 </div>
 
@@ -86,7 +86,7 @@ export default function SolutionOverview() {
           </div>
           <a
             href="#demo"
-            className="px-5 py-2.5 bg-slate-50 dark:bg-slate-950 hover:bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5 hover:border-slate-700 text-xs font-mono text-cyan-400 font-semibold rounded-xl tracking-wider uppercase transition inline-flex items-center gap-1.5 flex-shrink-0 cursor-pointer"
+            className="px-5 py-2.5 bg-slate-50 dark:bg-slate-950 hover:bg-white dark:hover:bg-slate-900 border border-slate-200 dark:border-white/5 hover:border-slate-700 text-xs font-mono text-cyan-400 font-semibold rounded-xl tracking-wider uppercase transition inline-flex items-center gap-1.5 flex-shrink-0 cursor-pointer"
           >
             Launch Live Simulator
             <ArrowDown size={12} className="animate-bounce" />
