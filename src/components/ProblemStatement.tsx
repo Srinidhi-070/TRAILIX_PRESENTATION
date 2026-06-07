@@ -89,9 +89,12 @@ export default function ProblemStatement() {
                   <line x1="20%" y1="5%" x2="50%" y2="45%" stroke="url(#sat-line)" strokeWidth="1.5" strokeDasharray="3,3" />
                   <line x1="80%" y1="5%" x2="50%" y2="45%" stroke="url(#sat-line)" strokeWidth="1.5" strokeDasharray="3,3" />
                   
-                  {/* Scattered waves */}
-                  <path d="M 50,45 L 35,55 L 20,70" fill="none" stroke="#ef4444" strokeWidth="1" strokeDasharray="2,2" />
-                  <path d="M 50,45 L 65,55 L 80,72" fill="none" stroke="#ef4444" strokeWidth="1" strokeDasharray="2,2" />
+                  {/* Scattered waves (using percentage lines to scale properly) */}
+                  <line x1="50%" y1="45%" x2="35%" y2="55%" stroke="#ef4444" strokeWidth="1" strokeDasharray="2,2" />
+                  <line x1="35%" y1="55%" x2="20%" y2="70%" stroke="#ef4444" strokeWidth="1" strokeDasharray="2,2" />
+                  
+                  <line x1="50%" y1="45%" x2="65%" y2="55%" stroke="#ef4444" strokeWidth="1" strokeDasharray="2,2" />
+                  <line x1="65%" y1="55%" x2="80%" y2="72%" stroke="#ef4444" strokeWidth="1" strokeDasharray="2,2" />
                 </svg>
 
                 {/* Satellite Nodes */}
