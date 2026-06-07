@@ -90,7 +90,7 @@ export default function SystemWorkflow() {
 
                           <div>
                             <span className="text-[8px] font-mono font-bold text-slate-500 leading-none">PHASE {step.id}</span>
-                            <h4 className="text-sm font-semibold text-slate-800 dark:text-slate-200 mt-1 leading-none group-hover:text-black dark:hover:text-white transition">
+                            <h4 className="text-sm font-semibold text-slate-800 dark:text-slate-200 mt-1 leading-none group-hover:text-black dark:group-hover:text-white transition">
                               {step.title}
                             </h4>
                           </div>
