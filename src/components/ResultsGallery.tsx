@@ -58,7 +58,7 @@ export default function ResultsGallery() {
          <img 
            src={imageSrc} 
            alt={`${id} Demo`} 
-           className="w-full h-full object-contain p-4 opacity-90 hover:opacity-100 transition-opacity drop-shadow-2xl"
+           className={`w-full h-full ${id === 'ar_navigation' ? 'object-cover' : 'object-contain p-4 drop-shadow-2xl'} opacity-90 hover:opacity-100 transition-opacity`}
          />
       </div>
     );
