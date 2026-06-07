@@ -76,22 +76,7 @@ export default function SolutionOverview() {
           ))}
         </div>
 
-        {/* Call to action connecting solution to sandbox */}
-        <div className="p-8 rounded-3xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-white/5 relative overflow-hidden text-left flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-          <div className="space-y-2">
-            <h4 className="text-lg font-display font-bold text-black dark:text-white">Experience our pillars in the live simulator below</h4>
-            <p className="text-xs text-slate-600 dark:text-slate-400 font-sans max-w-2xl">
-              Take our interactive simulation widget for a spin to search nodes, scan barcodes, and calculate optimum steps with the A* algorithm!
-            </p>
-          </div>
-          <a
-            href="#demo"
-            className="px-5 py-2.5 bg-slate-50 dark:bg-slate-950 hover:bg-white dark:hover:bg-slate-900 border border-slate-200 dark:border-white/5 hover:border-slate-700 text-xs font-mono text-cyan-400 font-semibold rounded-xl tracking-wider uppercase transition inline-flex items-center gap-1.5 flex-shrink-0 cursor-pointer"
-          >
-            Launch Live Simulator
-            <ArrowDown size={12} className="animate-bounce" />
-          </a>
-        </div>
+
 
       </div>
     </section>
